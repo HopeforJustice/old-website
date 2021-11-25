@@ -3,6 +3,7 @@
  * The base configurations of the WordPress.
  *
  *
+ *
  * This file has the following configurations: MySQL settings, Table Prefix,
  * Secret Keys, and ABSPATH. You can find more information by visiting
  * {@link https://codex.wordpress.org/Editing_wp-config.php Editing wp-config.php}
