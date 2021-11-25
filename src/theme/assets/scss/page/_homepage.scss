@@ -1,0 +1,187 @@
+/************************************************
+*  $_HOMEPAGE.SCSS
+*************************************************/
+
+// make the header sit nicely over that big image
+.page-template-page-homepage .headroom--top.site-header, .home .headroom--top.site-header {
+	background-color: transparent;
+	border-bottom: 0 none;	
+	.branding__text {
+		fill: $white;
+	}  
+	.site-navigation .menu {
+		> .menu-item > a {
+			color: $white;
+			-webkit-font-smoothing: antialiased;
+		}
+	}
+	 .menu-btn {
+		-webkit-font-smoothing: antialiased;
+	 }
+	@include transition(all .2s ease-in-out);
+}
+
+
+.no-svg .home .headroom--top .branding__logo-fallback {
+	background: transparent url(assets/img/logo__invert.png) no-repeat 0 0;
+	display: block;
+}
+
+
+.page-template-page-homepage .hero__content, .home .hero__content {
+	p {
+		font-style: italic;
+		@include font-size(18);
+		margin-bottom: em(24px,18);
+		-webkit-font-smoothing: antialiased;
+	}
+}
+
+.page-template-page-homepage .inner, .home .inner {width:100%;}
+
+// change homepage width
+@include mq($from: tablet) {
+.page-template-page-homepage .inner, .home .inner {max-width: $homepage-width; width:100%;}
+}
+
+
+// change the height and layout of the hero image
+.page-template-page-homepage .site-content, .home .site-content {padding-top: 0;}
+@include mq($from: desktopLarge) {
+.page-template-page-homepage .hero, .home .hero { height: 50vh;};
+}
+
+@include mq($from: desktopXLarge) {
+.page-template-page-homepage .hero, .home .hero { height: 60vh;};
+}
+
+@include mq($from: desktopXXLarge) {
+.page-template-page-homepage .hero, .home .hero { height: 80vh;};
+}
+
+.page-template-page-homepage .site-content, .home .site-content {padding-top: 0;}
+
+// change the height layout of card title
+.page-template-page-homepage, .home {
+	&__cards-title {
+		margin: 100px auto 80px auto;
+	}
+}
+
+// make CHANGE LIVES END SLAVERY sit at the bottom
+.page-template-page-homepage .hero, .home .hero {
+	display: flex;
+	align-items: flex-end;
+}
+
+// asw custom homepage 
+.homepage__asw {background-color:#e63425;}
+
+.homepage__asw-download {
+	background-color:#f5e8d6;
+	color: black;
+	padding: 10px 20px;
+	transition: all 0.3s ease;
+	&:hover {
+		cursor: pointer;
+		color: black;
+		transform: scale(1.1);
+	}
+}
+
+.homepage__asw-info {
+	padding-left:0;
+	padding-top:0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items:center;
+}
+
+.homepage__asw-content {
+	display: flex;
+	flex-direction: column;
+	margin-top: 60px;
+	padding-bottom:80px;
+	.homepage__asw-header{
+		color: white;
+		display:none;
+	}
+	.homepage__asw-date {
+		background-color:#000;
+		color:white;
+		letter-spacing: 4px;
+		padding:5px;
+		text-align: center;
+	}
+	.homepage__asw-image-container {
+		padding:20px;
+		margin-top: 30px;
+	}
+	.homepage__asw-text {
+		color:white;
+		padding:0 40px;
+		margin-top: 30px;
+		font-size: 18px;
+		text-align: center;
+	}
+}
+
+@include mq($from: mobileLandscape) {
+
+// asw custom homepage 
+.homepage__asw-content {
+	margin-top: 80px;
+	.homepage__asw-date {
+		font-size: 18px;
+	}
+	.homepage__asw-image-container {
+		margin-top: 30px;
+	}
+	.homepage__asw-text {
+	}
+}
+
+}
+
+@include mq($from: desktop) {
+
+.homepage__asw-inner {
+	max-width: $homepage-width;
+	margin: 0 auto;
+}
+
+.homepage__asw {font-size: 18px;}
+
+.homepage__asw-content {
+	flex-direction: row;
+	align-items: center;
+	margin-top: 80px;
+	padding-top:40px;
+	padding-bottom: 50px;
+
+	.homepage__asw-header{
+		color: #000;
+		display:block;
+		text-align: center;
+		letter-spacing: 3px;
+		font-size: 40px;
+	}
+	.homepage__asw-date {
+		display:none;
+	}
+	.homepage__asw-image-container {
+		margin-top: 0px;
+		img {width:100%;}
+	}
+	.homepage__asw-text {
+		color:white;
+		padding:0 40px;
+		margin-top: 20px;
+		margin-bottom: 60px;
+		font-size: 24px;
+		text-align: center;
+	}
+}
+
+}

@@ -1,0 +1,349 @@
+/************************************************
+*  $_CAMPAIGN.SCSS
+*************************************************/
+
+// code here changes for each crazy campaign we do
+
+$campaign-green:#312937; //now purple
+$campaign-dark-green:#E30613; //now red
+$campaign-light-blue:#8ABDE8;
+$campaign-lighter-blue:#B7D6F1;
+$campaign-yellow:#FFC745;
+
+.campaign {
+	width:100%;
+	background-color:white;
+}
+
+.campaign__hero {
+	background-color:$campaign-green;
+}
+
+.campaign__buttons {
+	width: 100%;
+    display: flex;
+    padding:0 20px;
+    &--margin{
+    	margin-bottom: 30px;
+    }
+    &--space-evenly {
+    	justify-content: space-evenly;
+    }
+}
+
+.campaign__button {
+	background-color:$campaign-dark-green;
+	border: 2px solid $campaign-dark-green;
+	padding: 10px 14px;
+	font-size: 12px;
+	border-radius: 10px;
+	text-align: center;
+	&--white {
+		background-color:white;
+		color:black;
+		border:2px solid white;
+	}
+	&--black {color:black;}
+	&--outline {
+		background-color:transparent;
+	}
+	&--margin-right {
+		margin-right: 30px;
+	}
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.campaign__title {
+	font-size: 32px;
+	color: white;
+}
+
+.campaign__img {
+	height:150px;
+	background-size: cover;
+	background-position: top -100px left;
+	margin-left: -10px;
+	margin-right:-10px;
+	background-image: url("https://hopeforjustice.org/wp-content/uploads/2021/05/hc200-new-1.jpg");
+}
+
+.campaign__info {
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom:45px;
+	.campaign__line {
+		height:3px;
+		margin: 30px 0;
+		width:65%;
+		background-color:$campaign-dark-green;
+	}
+	.campaign__logo {
+		width:65%;
+	}
+	.campaign__info-text {
+		text-align: center;
+		font-size: 16px;
+		margin: 30px 0;
+		width:80%;
+	}
+}
+
+.campaign__description {
+	p{font-size: 16px;}
+	padding: 30px 20px;
+	&--extra-padding{
+		padding:40px 30px;
+		margin:0 -10px;
+		overflow: hidden;
+	}
+	&--no-margin {
+		margin:0;
+	}
+	&--physical {
+		background-color:white;
+		color: black;
+	}
+	&--thinking {
+		background-color:white;
+		color:black;
+	}
+	&--creative {
+		background-color:white;
+		color:black;
+	}
+}
+
+.campaign__further-description {
+	background-color: $campaign-green;
+	color:white;
+	.campaign__title {color:$campaign-dark-green;}
+	.campaign__second-img {
+		background-color:$campaign-green;
+		color: white;
+		margin: 0 -10px;
+		overflow: hidden;
+		.campaign__title {color: white;}
+	}
+}
+
+.campaign__drop-down {
+	&-content {
+		padding:20px;
+		display: flex;
+		justify-content: space-between;
+		.campaign__title {
+			font-size: 22px;
+			margin-bottom:0;
+		}
+		.campaign__drop-down-icon {
+			width:30px;
+			height:30px;
+			transition: all 0.2s ease-out;
+			&--open {
+				transform: rotate(90deg);
+			}
+		}
+	}
+}
+
+.campaign__physical	{
+	background-color: $campaign-dark-green;
+}
+.campaign__thinking	{
+	background-color: $campaign-green;
+}
+.campaign__creative	{
+	background-color: $campaign-dark-green;
+}
+.campaign__physical-img{
+	margin:0 -10px;
+	overflow: hidden;
+	height:200px;
+	background-size:cover;
+	background-position: bottom -100px left;
+	background-image: url("https://hopeforjustice.org/wp-content/uploads/2021/04/hc200-physical.jpg");
+}
+.campaign__thinking-img{
+	margin:0 -10px;
+	overflow: hidden;
+	height:200px;
+	background-size:cover;
+	background-position: bottom -150px left;
+	background-image: url("https://hopeforjustice.org/wp-content/uploads/2021/05/hc-cake.png");
+}
+.campaign__creative-img{
+	margin:0 -10px;
+	overflow: hidden;
+	height:200px;
+	background-size:cover;
+	background-position: bottom -50px left;
+	background-image: url("https://hopeforjustice.org/wp-content/uploads/2021/05/hc-fly.png");
+}
+
+.campaign__footer {
+	.campaign__title {color: black;}
+	.campaign__footer-buttons {
+		padding-left: 0;
+		margin-top: 30px;
+	}
+}
+
+.campaign__drop-down-desc-content {
+	max-height: 0px;
+	overflow: hidden;
+	transition: all 0.3s ease-out;
+}
+
+.campaign__drop-down-desc-content--open {
+	max-height: 1500px;
+}
+
+.campaign__physical-content {
+	//background-color: $campaign-light-blue;
+	strong {font-size: 24px; color: $campaign-dark-green}
+}
+.campaign__thinking-content {
+	//background-color: $campaign-yellow;
+	strong {font-size: 24px; color: $campaign-dark-green}
+}
+.campaign__creative-content {
+	//background-color: $campaign-green; 
+	strong {font-size: 24px; color: $campaign-dark-green}
+}
+
+@include mq($from: tablet) {
+
+.campaign__img {
+	height:300px;
+	background-position: bottom -100px left;
+}
+
+.campaign__info {;
+	.campaign__line {
+		width:45%;
+	}
+	.campaign__logo {
+		width:45%;
+	}
+	.campaign__info-text {
+		width:50%;
+	}
+}
+
+.campaign__hero--buttons {
+	width:45%;
+}
+
+.campaign__physical-img, .campaign__creative-img, .campaign__thinking-img{
+	height:400px;
+}
+
+.campaign__thinking-img {
+	background-position: bottom -200px left;
+}
+
+}
+
+
+@include mq($from: desktop) {
+
+
+.campaign__img {
+	background-position: left -400px center !important;}
+
+.campaign__split {
+	display:flex;
+	&--reverse {
+		flex-direction: row-reverse;
+	}
+	.campaign__split-half {
+		width:50%;
+		height: auto;
+		background-position: center center;
+		margin: 0;
+	}
+	.campaign__info {
+		margin-bottom: 20px;
+		.campaign__line {
+			margin-top: 170px;
+			width:60%;
+		}
+		.campaign__logo {
+			width:50%;
+		}
+		.campaign__info-text {
+			width:70%;
+		}
+	}
+	.campaign__hero--buttons {
+	width:75%;
+	}
+}
+
+.campaign__top-description {
+	//text-align: center;
+	margin:20px 0;
+}
+
+.campaign__further-description {
+	.campaign__second-img {
+		display: flex;
+		background-size:150%;
+		background-position: bottom left -2px;
+		background-image:url("https://hopeforjustice.org/wp-content/uploads/2021/04/hc200-2.jpg");
+		.campaign__description {
+			margin-top: auto;
+			color: white;
+		}
+		.campaign__title {color: white;}
+	}
+	.campaign__buttons {display:none;}
+}
+
+.campaign__description--desktop-padding {
+	padding: 50px 50px 50px 0;
+}
+
+.campaign__inner-content {
+	display: flex;
+}
+
+.campaign__drop-down{
+	position: relative;
+	box-shadow: 0px 4px 3px 0px rgba(0,0,0,0.05);
+-webkit-box-shadow: 0px 4px 3px 0px rgba(0,0,0,0.05);
+-moz-box-shadow: 0px 4px 3px 0px rgba(0,0,0,0.05);
+}
+
+.campaign__description--extra-padding {margin:0;}
+
+.campaign__physical-img {width:50%;}
+.campaign__drop-down-content {
+	padding-left: 0; padding-right: 0;
+	.campaign__title {font-size: 32px;}
+}
+
+.campaign__footer {
+	margin-top: 30px;
+}
+
+.campaign__button {
+	padding: 10px 14px;
+	font-size: 14px;
+}
+
+.campaign__hero-content {
+	background-color: $campaign-green; 
+	margin-bottom: 0 !important;
+	min-height: 700px;
+
+}
+.campaign__hero {background-color: white; }
+
+}
+
+

@@ -1,0 +1,63 @@
+/************************************************
+*  $_ANIMATIONS.SCSS
+*************************************************/
+@keyframes pulse{
+	0%{-webkit-transform:scale(0.01);opacity:.0}
+	9%{-webkit-transform:scale(0.09);opacity:.0}
+	10%{-webkit-transform:scale(0.1);opacity:1.0}
+	70%{-webkit-transform:scale(0.7);opacity:1.0}
+	100%{-webkit-transform:scale(1.0);opacity:.0}
+}
+@-webkit-keyframes pulse{
+	0%{-webkit-transform:scale(0.01);opacity:.0}
+	9%{-webkit-transform:scale(0.09);opacity:.0}
+	10%{-webkit-transform:scale(0.1);opacity:1.0}
+	70%{-webkit-transform:scale(0.7);opacity:1.0}
+	100%{-webkit-transform:scale(1.0);opacity:.0}
+}
+
+@include keyframes(slideDown) {
+  from {
+    @include transform(translateY(-100%));
+  }
+  to {
+    @include transform(translateY(0));
+  }
+}
+
+@include keyframes(slideUp) {
+  from {
+    @include transform(translateY(0));
+  }
+  to {
+    @include transform(translateY(-100%));
+  }
+}
+@-webkit-keyframes pulse2 {
+  0% {
+    opacity: 1;
+    @include transform(scale3d(0.8, 0.8, 1));
+  }
+  to {
+    opacity: 0;
+    @include transform(scale3d(1.2, 1.2, 1));
+  }
+}
+
+@keyframes pulse2 {
+  0% {
+    opacity: 1;
+    @include transform(scale3d(0.8, 0.8, 1));
+  }
+  to {
+    opacity: 0;
+    @include transform(scale3d(1.2, 1.2, 1));
+  }
+}
+@mixin rotate-forever {
+  0%    { @include transform(rotate(0deg)); }
+  100%  { @include transform(rotate(360deg)); }
+}
+@-webkit-keyframes rotate-forever { @include rotate-forever; }
+   @-moz-keyframes rotate-forever { @include rotate-forever; }
+        @keyframes rotate-forever { @include rotate-forever; }

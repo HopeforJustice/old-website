@@ -1,0 +1,51 @@
+/********************************
+*  _SINGLE.SCSS
+*********************************/
+
+// Backgrounds 
+////////////////////////////////////////////////
+
+
+.single {
+	&.stretch {
+		background-size: cover;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+	}
+	&.tile {
+		background-repeat: repeat;
+		background-position: 0 0;
+	}
+}
+
+
+
+// Headers and footers
+////////////////////////////////////////////////
+
+.single-header, .single-footer {
+	text-align: center;
+}
+
+.single-header {
+	padding-bottom: $base-spacing-unit;
+}
+.single-header__sub-title {
+	margin-top: 0;
+}
+
+// Global style for each row 
+////////////////////////////////////////////////
+
+.single {
+	padding: $base-spacing-unit*2 0;
+	border-bottom: 1px solid $light-gray;
+}
+
+// this is an exception created for blog posts 
+// - we use single for row styling - but when Wordpress adds 
+// 'single' to the body as the template style we don't want double padding
+
+body.single {
+	padding: 0;
+}

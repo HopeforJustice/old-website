@@ -1,0 +1,58 @@
+/********************************
+*  _modal.SCSS
+*********************************/
+
+.modal {
+	background-color: rgba(0, 0, 0, 0.2);
+	padding:20px;
+	.modal__dialog {
+		margin:auto;
+		overflow: hidden;
+		display: flex;  
+		flex-direction: column;
+		justify-content: center;
+		align-items:center;
+		overflow-y: auto;
+		min-height: calc(100vh - 100px);
+		}
+	.modal__content {
+		padding:35px;
+		padding-top:40px;
+		background-color:#f2f2f2;
+		border-radius: 5px;
+		position:relative;
+		width:100%;
+		max-width: 500px;
+	}
+}
+
+.modal__close {
+	width:50px;
+	height: 50px;
+	text-align: center; line-height: 50px;
+	color:#000; 
+	display:block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    &:hover {
+    	color: #000;
+    }
+    &::before {
+    	opacity: 0.5;
+    	font-size:12px;
+    }
+}
+
+
+
+@include mq($from: desktop) {
+
+.modal {
+	.modal__content {
+		max-width: 530px;
+		//min-height: calc(100vh - 200px);
+	}
+}
+
+}

@@ -1,0 +1,188 @@
+/*******************************************************************************
+*  	$.donate-uk
+********************************************************************************/
+
+//removes previous button on first step
+.wizard > .actions > ul > li.disabled {display: none;}
+
+.pca {width:200px; overflow:scroll;}
+
+//amount padding adjustment
+.page-id-762 #Amount {padding-left:30px;}
+
+.page-id-762 #givingAmountLink {display: none; justify-content: flex-start; margin-bottom: 10px;}
+.page-id-762 #display {margin: 0 4px;}
+.page-id-762 #display::before {content:"£";}
+//step buttons
+.wizard > .actions > ul li {text-align: center; }
+.donate-uk__spacemob {display:flex; justify-content: space-around;}
+//error adjustments
+.donate-uk__wrapper input.error {color:red; border: 1px dotted red;}
+.donate-uk__wrapper label.error {color:red; border: none; font-size: 12px; font-weight: 100;}
+.donate-uk__errorTxt {color:red; text-align: left;}
+.donate-uk__errorTxt > #Amount-error {text-align: center;}
+//gravity form adjustments
+#input_6_1 {padding-left: 30px; width:200px; margin: 0 auto;}
+#field_6_1 {width:200px; margin: 0 auto;}
+.gform_footer{display: flex; justify-content: center;}
+#gform_submit_button_6 {margin-top:20px;}//change for desktop
+
+//making checkboxes look a bit better
+.donate-uk__pref {display:flex;}
+.donate-uk__pref label {margin-left:15px; font-size:16px;}
+.donate-uk__pref label:nth-child(1) {margin-left:0px;}
+.donate-uk__pref label input{margin-right:2px;}
+
+
+//hacky width modification
+.page-id-762 .inner {max-width: $homepage-width;}
+
+//removing the default submit button that comes with the widget
+.donate-uk__submit{display: none;}
+
+//removing titles of steps
+.steps {display:none;}
+.donate-uk__hidden {display:none;}
+
+
+//page styles
+.donate-uk__link {text-decoration: none; color: $orange;}
+.donate-uk__giftaid {margin-top: 35px;}
+
+.donate-uk {
+	background-position: 21% -76%;
+	background-repeat: no-repeat;
+	background-color:white;
+	background-image: url(https://hopeforjustice.org/wp-content/uploads/2019/06/guardian-web-optimised.jpg);
+}
+.donate-uk__secondimg {background-image: url(https://hopeforjustice.org/wp-content/uploads/2019/06/guardian-web-optimised-alt.jpg);}
+.donate-uk__noback {background-image:none;}
+
+.donate-uk__msgheader {font-size:22px; margin-bottom: 20px;}
+.donate-uk__msgp {padding:0}
+.donate-uk__options {margin-bottom: 15px;}
+.donate-uk__orange {color:$orange;}
+.donate-uk__gradient {width: 100%; position: absolute; min-height: 100%; margin-left: -10px;}
+.go_cardlesstext {font-size: 12px;}
+.donate-uk__yes {margin-top:20px; margin-bottom:12px;}
+.donate-uk__modaltrig {
+	font-size:12px;
+	position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    background-color: $orange;
+    color:white;
+}
+
+
+.donate-uk__wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+
+}
+
+.donate-uk__message {
+	text-align: center;
+	padding: 40px 0px 25px 0px;
+	font-size: 12px;
+	max-width: 420px;
+	margin: 0 auto;
+}
+
+.donate-uk__form {
+	width:100%;
+}
+
+.donate-uk__select{
+	width:100%;
+	z-index: 1;
+	padding: 0 10px 0 10px;
+	overflow: auto;
+	padding-bottom: 153px;
+	display: flex;
+	flex-wrap: wrap;
+}
+.donate-uk__amount__inner {
+	width: 200px;
+	margin: 0 auto;
+}
+
+.donate-uk__amount__inner:before {
+	content: '£';
+    position: absolute;
+    padding-top: .4444444444em;
+    padding-left: .6666666667em;
+    color: #999;
+    font-size: 18px;
+    font-size: 1.2857142857rem;
+    line-height: 1.222222222;
+}
+
+.donate-uk__form--hidden {display:none;}
+
+.donate-uk__options {
+	display: flex;
+	justify-content: center;
+}
+
+.donate-uk__formwrap {width:100%;}
+.donate-uk__msgwrap {width:100%;}
+.donate-uk__comment {margin-top: 10px;}
+
+// tiny screens
+@include mq($from: mobile, $until: mobileMedium) {
+.donate-uk {background-position: 22% 235px;}
+.donate-uk__message {padding-left:0; padding-right: 0;}
+.donate-uk__select {padding-bottom: 240px;}
+}
+
+
+
+@include mq($from: tablet) {
+
+.donate-uk__errorTxt > #Amount-error {text-align: left;}
+.wizard > .actions > ul li{text-align: left;}
+.donate-uk__spacemob {justify-content: space-between;}
+#field_6_1 {width: 100%; margin:0;}
+#input_6_1 {width:100%; margin:0;}
+.gform_footer {justify-content: flex-start;}
+.donate-uk__forminner {width:100%;}
+.donate-uk__amount__inner {width:100%; margin:0;}
+.donate-uk__noback {background-image: url(https://hopeforjustice.org/wp-content/uploads/2019/06/guardian-web-optimised.jpg);}
+.donate-uk__wrapper {justify-content: flex-end; align-items: flex-start; padding:80px 20px 0 20px;}
+.donate-uk__wrapper--padding {padding:0px 20px 50px 20px;}
+.donate-uk__formwrap {width:40%; display:flex; flex-direction: column; align-items: flex-start;}
+.donate-uk__msgwrap {width:60%; display: flex;}
+.donate-uk__select {padding:0;}
+.donate-uk {min-height: 63vh; background-position: 21% 180px;}
+.donate-uk__background--cover {background-size: cover; background-position: 25% 180px;}
+.donate-uk__msgp {padding:0;}
+.donate-uk__message {text-align: left; padding: 0 40px 0 0; margin: 0 0;}
+.donate-uk__modaltrig {
+	font-size:12px;
+	position: static;
+    margin: 0 ;
+    text-align: left;
+    color:$orange;
+    background-color:transparent;
+    margin-top: 10px;
+    width:200px;
+}
+
+
+}
+
+@include mq($from: desktopXLarge) {
+.donate-uk {background-size: cover; background-position: 0 0; min-height: 70vh; }
+.donate-uk__wrapper {padding-top:150px;}
+.donate-uk__wrapper--padding {padding:20px 20px 50px 20px;}
+.donate-uk__msgwrap {justify-content: flex-end;}
+.donate-uk__formwrap {width:30%;}
+.donate-uk__msgwrap {width:70%;}
+}	

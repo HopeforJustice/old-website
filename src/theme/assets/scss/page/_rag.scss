@@ -1,0 +1,226 @@
+/************************************************
+*  $_RAG.SCSS
+*************************************************/
+
+.page-template-page-raise-a-glass .site {background-color: white;}
+.page-template-page-raise-a-glass .ti_title {display:none;}
+.page-template-page-raise-a-glass .TickerNews {display:none;}
+.page-template-page-raise-a-glass header {display:none;}
+.page-template-page-raise-a-glass .site-content {
+	padding-top:0;
+	background-color: #ffffff;
+}
+
+.rag-hero {
+	width:100%;
+	height:50vw;
+	background-size: 150%;
+	background-repeat: no-repeat;
+	background-position: bottom -25vw left -50vw;
+	display:flex;
+	justify-content: center;
+	align-items: flex-start;
+	&__logo {
+		margin-top: 5vw;
+		width:clamp(150px, 50vw, 300px);
+	}
+}
+
+.rag-description {
+	font-size: 16px;
+	padding:30px;
+	font-family: 'open-sans', sans-serif;
+	font-weight: 300;
+	&__header {
+		font-size: clamp(23px, 7vw, 48px);
+		font-family: 'Playfair Display', serif;
+		margin-bottom:25px;
+	}
+}
+
+.rag-prices {
+	display:flex;
+	flex-direction: column;
+	font-family: 'open-sans', sans-serif;
+	background-color: #ffffff;
+	&__card {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+		padding: 30px;
+		background-color:#D9D9D9;
+		&:nth-child(even){
+			background-color:#F6F6F8;
+		}
+	}
+	&__price{
+		font-weight: bolder;
+		font-size: clamp(23px, 8vw, 48px);
+		margin-bottom: 10px;
+	}
+	&__description {
+		max-width: 290px;
+		margin-bottom: 20px;
+	}
+	&__button {
+		background-color: #D21220;
+		color: white;
+		cursor: pointer;
+		padding: 10px 25px;
+		border-radius: 50px;
+		font-weight: bold;
+		font-size: 18px;
+		margin-bottom: 10px;
+	}
+	&__custom {
+		background-color: transparent;
+	}
+	&__custom-amount {
+		border: 1px solid black;
+		border-radius: 50px;
+		padding: 2px 10px;
+		margin-bottom: 20px;
+		max-width: 220px;
+		position: relative;
+		&::after{
+			content: '$';
+			position: absolute;
+			top:4px;
+			left:20px;
+			font-size: 24px;
+			font-weight: bold;
+		}
+		input {
+			margin-bottom: 0;
+			padding: 0;
+			padding-left: 30px;
+			border: none;
+			font-weight: bold;
+			&::placeholder{
+				opacity: 0.3;
+			}
+		}
+	}
+
+}
+
+@include mq($from: tablet) {
+
+.rag-hero {
+	height:40vw;
+	background-size: 100%;
+	background-position: bottom -11vw left 0vw;
+}
+	
+.rag-description {
+		text-align: center;
+		box-sizing: border-box;
+		padding: 60px 0;
+		max-width: 500px;
+		margin: 0 auto;
+		font-size: 18px;
+	&__header {
+		margin-bottom: 40px;
+	}
+}
+
+.rag-prices {
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	max-width: 1000px;
+	margin:0 auto;
+	margin-bottom: 100px;
+	&__card {
+		margin:10px;
+		border-radius: 20px;
+	}
+	&__button{
+		margin-top: auto;
+	}
+	&__custom {
+		.rag-prices__price {
+			font-size: 36px;
+		}
+	}
+}
+
+}
+
+@include mq($from: desktopXXLarge) {
+
+.rag-hero {
+	min-height:100vh;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	&__logo {
+		position: absolute;
+		top:70px;
+		right: 70px;
+		margin-top:0;
+		width:400px;
+	}
+}
+
+.rag-description {
+	position: absolute;
+	top:70px;
+	left: 70px;
+	color: white;
+	padding: 0;
+	text-align: left;
+	font-size: 24px;
+	max-width: 700px;
+	&__header {
+		font-size: 64px;
+	}
+}
+
+.rag-prices {
+	position: absolute;
+	bottom:70px;
+	max-width: none;
+	background-color: transparent;
+	margin-bottom: 0;
+	margin-left: -30px;
+	&__card {
+		max-width: calc(18% - 20px);
+	}
+	&__custom {
+		background-color: #F6F6F8;
+		.rag-prices__custom-amount {
+			order:1;
+			&::after {
+				font-size: 42px;
+				top:1px;
+			}
+		}
+		.rag-prices__description {order:2;}
+		.rag-prices__button {order:3;}
+		.rag-prices__price {display: none;}
+		input {
+			background-color: transparent;
+			height:60px;
+			font-size: 40px;
+			padding-left: 40px;
+		}
+	}
+
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

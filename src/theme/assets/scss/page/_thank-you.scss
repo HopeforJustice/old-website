@@ -1,0 +1,308 @@
+/************************************************
+*  $_THANK_YOU.SCSS
+*************************************************/
+.thanks__main {
+	background-color:#F5F5F5;
+}
+
+.thanks__header {
+	width:100%;
+	display: flex;
+	color:#F2BDAE;
+	justify-content: center;
+	align-items:center;
+	background-color: #D34F42;
+	text-align: center;
+	height:38px;
+}
+.thanks__header-img {
+	display: flex;
+	height:100%;
+	align-items:flex-end;
+	width:100%;
+	justify-content: center;
+}
+.thanks__tweet {
+	height:47px;
+	width:47px;
+	background-color:#997C4D;
+	color: white;
+	border-radius: 100%;
+	font-size: 10px;
+	font-family: le-monde-livre-classic-byol,serif;
+	font-style: normal;
+	font-weight:400;
+	text-align: center;
+	line-height: 13px;
+	display: flex;
+	justify-content: center;
+	align-items:center;
+	transform: translate(0, 50%);
+	position:relative;
+	z-index: 99;
+	div {margin-top: 2px; margin-left: 1px;}
+}
+
+.thanks__pre-header{
+	font-family: le-monde-livre-classic-byol,serif;
+	font-weight: 700;
+	font-style: normal;
+	margin:0;
+	font-size: 14px;
+}
+
+.thanks__text {
+	font-size: 12px;
+	text-align: center;
+	margin-top: 40px;
+}
+
+
+
+.thanks__body{
+	width:100%;
+	padding: 0 10px;
+	background-color:#F5F5F5;
+	padding-bottom:20px;
+	max-width: 450px;
+	margin:0 auto;
+}
+
+.thanks__inner {
+	padding:0 20px;
+	background-color:#ffffff;
+
+}
+
+.thanks__header-img{
+	background-image: url(https://hopeforjustice.org/wp-content/uploads/2020/04/HandsKHA.jpg);
+	height:134px;
+	background-size: cover;
+}
+
+.thanks__main-header{
+	font-size: 15px;
+	font-family: le-monde-livre-classic-byol,serif;
+	font-weight: 700;
+	font-style: normal;
+	margin-bottom: 30px;
+}
+
+.thanks__main-footer {
+	font-size: 14px;
+	font-family: le-monde-livre-classic-byol,serif;
+	font-weight: 700;
+	font-style: normal;
+	color: #D34F42;
+}
+
+.thanks__footer {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items:center;
+	padding:35px 0;
+}
+
+.thanks__footer-circle {width:55px;height: 55px; background-size: cover;}
+.thanks__footer-circle-1{background-image: url(https://hopeforjustice.org/wp-content/uploads/2020/04/khac1.png);}
+.thanks__footer-circle-2{background-image: url(https://hopeforjustice.org/wp-content/uploads/2020/04/khac2.png);}
+.thanks__footer-circle-3{background-image: url(https://hopeforjustice.org/wp-content/uploads/2020/04/khac3.png);}
+.thanks__footer-circle-4{background-image: url(https://hopeforjustice.org/wp-content/uploads/2020/04/khac4.png);}
+
+.thanks__circles{
+	position: fixed;
+	height:100%;
+	width:100%;
+	top:0;
+	overflow-x: hidden;
+}
+
+.thanks__circle-1 {
+	width:50px;height:50px;
+	top:40%;
+	position:absolute;
+	border-radius:100%;
+	transform: translate(-50%,-50%);
+	background-color:#EDD5B2;
+}
+.thanks__circle-2 {
+	width:24px;height:24px;
+	top:60%;
+	right:0px;
+	position:absolute;
+	border-radius:100%;
+	transform: translate(50%,-50%);
+	background-color:#D34F42;
+}
+.thanks__circle-3 {
+	width:20px;height:20px;
+	top:70%;
+	left:10px;
+	position:absolute;
+	border-radius:100%;
+	transform: translate(-50%,-50%);
+	background-color:#F2BDAE;
+}
+.thanks__show-tablet {display: none;}
+@include mq($from: mobileLandscape) {
+
+.thanks__main {
+	padding-top:20px;
+}
+
+}
+
+
+@include mq($from: tablet) {
+.thanks__show-tablet {display: block;}
+.thanks__show-mobile {display: none;}
+.thanks__body{
+	max-width: 650px;
+	padding:0;
+	padding-bottom:60px;
+}
+.thanks__inner{
+	padding: 0 60px;
+}
+.thanks__header {
+	height:78px;
+	max-width: 650px;
+	margin: 0 auto;
+}
+.thanks__header-img{
+	height:226px;
+}
+.thanks__pre-header {
+	font-size: 24px;
+}
+.thanks__main-header {
+	font-size: 27px;
+}
+.thanks__main-footer {
+	font-size: 18px;
+}
+.thanks__text {
+	margin-top: 80px;
+}
+.thanks__tweet {
+	height: 93px; width:93px;
+	font-size: 13px;
+	line-height: 18px;
+	div {margin-top: -2px;}
+}
+.thanks__footer-circle {width:85px;height: 85px;}
+
+
+.thanks__circle-1 {
+	width:96px;height:96px;
+	top:40%;
+	position:absolute;
+	border-radius:100%;
+	transform: translate(-50%,-50%);
+	background-color:#EDD5B2;
+}
+.thanks__circle-2 {
+	width:61px;height:61px;
+	top:60%;
+	right:0px;
+	position:absolute;
+	border-radius:100%;
+	transform: translate(50%,-50%);
+	background-color:#D34F42;
+}
+.thanks__circle-3 {
+	width:50px;height:50px;
+	top:70%;
+	left:60px;
+	position:absolute;
+	border-radius:100%;
+	transform: translate(-50%,-50%);
+	background-color:#F2BDAE;
+}
+
+}
+
+
+
+
+@include mq($from: desktopXXLarge) {
+
+.thanks__show-tablet {display: block;}
+.thanks__show-mobile {display: none;}
+.thanks__body{
+	max-width: 1200px;
+	padding:0;
+	padding-bottom:60px;
+}
+.thanks__inner{
+	padding: 0 80px;
+	padding-bottom:50px;
+}
+.thanks__header {
+	height:117px;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.thanks__header-img{
+	height:471px;
+}
+.thanks__pre-header {
+	font-size: 30px;
+}
+.thanks__main-header {
+	font-size: 50px;
+	margin-bottom: 55px;
+}
+.thanks__main-footer {
+	font-size: 30px;
+}
+.thanks__text {
+	font-size: 25px;
+	max-width: 800px;
+	margin: 0 auto;
+	margin-top: 130px;
+	margin-bottom: 50px;
+	p {
+		max-width: 650px;
+		margin: 0 auto;
+	}
+}
+.thanks__tweet {
+	height: 134px; width:134px;
+	font-size: 20px;
+	line-height: 30px;
+	div {margin-top: -2px;}
+}
+.thanks__footer {max-width: 850px; margin: 0 auto;}
+.thanks__footer-circle {width:155px;height: 155px;}	
+
+.thanks__circle-1 {
+	width:196px;height:196px;
+	top:40%;
+	position:absolute;
+	border-radius:100%;
+	transform: translate(-50%,-50%);
+	background-color:#EDD5B2;
+}
+.thanks__circle-2 {
+	width:118px;height:118px;
+	top:60%;
+	right:0px;
+	position:absolute;
+	border-radius:100%;
+	transform: translate(50%,-50%);
+	background-color:#D34F42;
+}
+.thanks__circle-3 {
+	width:97px;height:97px;
+	top:90%;
+	left:420px;
+	position:absolute;
+	border-radius:100%;
+	transform: translate(-50%,-50%);
+	background-color:#F2BDAE;
+}
+
+}
+

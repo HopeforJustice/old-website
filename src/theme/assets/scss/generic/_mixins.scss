@@ -1,0 +1,32 @@
+/********************************
+*  _MIXINS.SCSS
+*********************************/
+@mixin font-size($pxValue) {
+    font-size: $pxValue+px;
+    font-size: rem($pxValue);
+}
+
+/**
+ * Force overly long spans of text to truncate, e.g.:
+ *
+   `@include truncate(100%);`
+ *
+ * Where `$truncation-boundary` is a united measurement.
+ */
+@mixin truncate($truncation-boundary){
+    max-width:$truncation-boundary;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+@mixin tint-overlay($color, $alpha) {
+  content: '';
+  background-color: rgba($color, $alpha);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}

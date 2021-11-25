@@ -1,0 +1,272 @@
+{
+    "key": "group_55b79a3376ca4",
+    "title": "Styling options",
+    "fields": [
+        {
+            "key": "field_534407427af9c",
+            "label": "Background style",
+            "name": "background_style",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "vertical",
+            "choices": {
+                "none": "None",
+                "image": "Image",
+                "colour": "Solid colour"
+            },
+            "default_value": "none",
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "allow_null": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_5343c089627f5",
+            "label": "Background Image",
+            "name": "background_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_534407427af9c",
+                        "operator": "==",
+                        "value": "image"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "full",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5343c0a1627f6",
+            "label": "Background Image Style",
+            "name": "background_image_style",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_534407427af9c",
+                        "operator": "==",
+                        "value": "image"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "multiple": 0,
+            "allow_null": 0,
+            "choices": {
+                "stretch": "Stretch to fit",
+                "tile": "Tile"
+            },
+            "default_value": {
+                "stretch": "stretch"
+            },
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "return_format": "value",
+            "disabled": 0,
+            "readonly": 0
+        },
+        {
+            "key": "field_5343c0d9627f7",
+            "label": "Background Colour",
+            "name": "background_colour",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_534407427af9c",
+                        "operator": "==",
+                        "value": "colour"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": ""
+        },
+        {
+            "key": "field_5343c100627f8",
+            "label": "Text Colour Scheme",
+            "name": "text_colour_scheme",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "multiple": 0,
+            "allow_null": 0,
+            "choices": {
+                "light": "Dark text, light background",
+                "dark": "Light text, dark background"
+            },
+            "default_value": {
+                "light": "light"
+            },
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "return_format": "value",
+            "disabled": 0,
+            "readonly": 0
+        },
+        {
+            "key": "field_53f4f289fd153",
+            "label": "Text Alignment",
+            "name": "text_alignment",
+            "type": "select",
+            "instructions": "Default uses whatever is the default for that section type. Image header, 3 & 4 column are all centre aligned by default.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "multiple": 0,
+            "allow_null": 0,
+            "choices": {
+                "default": "Default",
+                "text--left": "Left aligned",
+                "text--center": "Centred",
+                "text--right": "Right aligned"
+            },
+            "default_value": {
+                "default": "default"
+            },
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "return_format": "value",
+            "disabled": 0,
+            "readonly": 0
+        },
+        {
+            "key": "field_54098ebb8bc94",
+            "label": "Text size",
+            "name": "text_size",
+            "type": "select",
+            "instructions": "In some places it's nice to have larger type without having to add \"gamma\" to everything. This adjust the base text size (without affecting other styles).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "multiple": 0,
+            "allow_null": 0,
+            "choices": {
+                "default": "Default",
+                "text--large-print": "Base 18px (large)"
+            },
+            "default_value": {
+                "default": "default"
+            },
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "return_format": "value",
+            "disabled": 0,
+            "readonly": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates\/page-parfait.php"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates\/page-single.php"
+            }
+        ],
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "762"
+            }
+        ],
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "763"
+            }
+        ],
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "1789"
+            }
+        ],
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "1863"
+            }
+        ],
+        [
+            {
+                "param": "page_parent",
+                "operator": "==",
+                "value": "3054"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1534520795
+}

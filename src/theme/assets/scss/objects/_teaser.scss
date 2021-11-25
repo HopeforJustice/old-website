@@ -1,0 +1,89 @@
+/********************************
+*  _TEASER.SCSS
+*********************************/
+
+// teasers are the snippets of news - image, excerpt, title etc. on the /news page
+
+//elements
+.teaser {
+	margin-bottom: $base-spacing-unit;
+	&__title {
+		margin-bottom : em(6,18);
+	}
+	&__meta {
+		@include font-size(11);
+		margin-bottom: em(5,11);
+		font-style:italic;
+	}
+	&__author {
+		font-weight: 700;
+	}
+
+	&__img-link {
+		display: block;
+		margin-bottom: $half-spacing-unit;
+		overflow: hidden;
+		img {
+			float: left;
+		}
+		&:hover {
+			.teaser__no-img {
+				border-color: darken(#cacecf, 10%); 
+			}
+		}
+		&:active .teaser__no-img:after {
+			-webkit-animation: pulse2 0.5s ease-out forwards;
+			animation: pulse2 0.5s ease-out forwards;
+		}
+	}
+	&__no-img {
+		width: em(360);
+		max-width: 100%;
+		background: #ecf0f1;
+		border: 1px solid #cacecf;
+		padding-bottom: 53.5117057%; // used to make the aspect ratio correct to match images
+		position: relative;
+		&:before {
+			@include font-size(122);
+			line-height: 1;
+			color: $white;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			@include transform(translate(-50%, -50%));
+		}
+		&:after {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin: -75px 0 0 -75px;
+			width: 150px;
+			height: 150px;
+			border-radius: 50%;
+			content: '';
+			opacity: 0;
+			pointer-events: none;
+			border: 4px solid rgba(255,255,255,0.5);
+		}
+		
+	}
+
+}
+
+//variants
+.teaser {
+	&--small {
+		margin-bottom: $base-spacing-unit/4;
+		.teaser__title {
+			@include font-size(14);
+			font-weight: 700;
+			line-height: 1.5;
+			margin-bottom: 0;
+		}
+	}
+}
+
+
+//sort out the news while we adjust the width of the site
+.teaser img {width:100%;}
+

@@ -1,0 +1,33 @@
+/********************************
+*  _video-overlay.scss
+*********************************/
+
+// activated video adds .video-overlay--noscroll to body and html
+
+
+
+.video-overlay .fluid-width-video-wrapper {
+   padding-top: 50%;
+   margin-bottom: 40px;
+}
+
+.video-overlay {
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	background-color: black;
+    z-index: 99999;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+@include mq($from: tablet) {
+	.video-overlay {padding: 10%;}
+}
+
+.video-overlay--no-scroll {margin: 0; height: 100%; overflow: hidden;}
+.video-overlay--hidden {display: none;}

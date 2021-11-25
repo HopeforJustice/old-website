@@ -1,0 +1,45 @@
+/************************************************
+*  $_NEWS-AD.SCSS
+*************************************************/
+
+// slightly different advert format used on /news
+.news-ad {
+	display: block;
+	position:relative;
+	margin-bottom: $base-spacing-unit;
+}
+.news-ad__button {
+	display: inline-block;
+	position: absolute;
+	border-radius: $base-border-radius;
+	@include font-size(18);
+	line-height: 1.222222222;
+	padding: em(7,18) em(20,18);
+	bottom: em(15,18);
+	right: em(15,18);
+	background-color: $base-body-color;
+	color: $white;
+	&.orange {
+		background-color: $orange;
+	}
+	&.blue {
+		background-color: $blue;
+	}
+}
+.news-ad__img {
+	vertical-align: bottom;
+	width:100%;
+}
+@include mq($from: mobileLandscape) {
+	.news-ad {
+		@include span-columns(12);
+		margin-bottom: $base-spacing-unit;
+	}
+}
+@include mq($from: tablet) {
+	.news-ad {
+		float: none;
+		width: auto;
+		margin: 0 0 $base-spacing-unit 0;
+	}
+}

@@ -1,0 +1,313 @@
+/************************************************
+*  $_BUTTON.SCSS
+*************************************************/
+
+// Buttons - all the colours of the rainbow, in singles and in boxes of plenty
+
+
+
+%button {
+	@include user-select(none);	
+	border-radius: $base-border-radius;
+	border-width: 2px;
+	border-style: solid;
+	display: inline-block;
+	font-weight: 700;
+	line-height: 1.857142857;
+	white-space: nowrap;
+	padding: 0 $base-spacing-unit;
+	margin: em(6px) 0;
+	-webkit-font-smoothing: antialiased;
+	&:disabled, [disabled] {
+		opacity: 0.8;
+	}
+}
+
+.button--line {
+	padding: 10px 20px; 
+	color:$hfj-gray; 
+	border:2px solid $hfj-gray; 
+	border-radius: 15px;
+	font-size: 12px;
+	margin-right: 24px;
+	margin-top: 22px;
+	margin-bottom:10px;
+	text-align: left;
+}
+
+.button--thinline {
+	padding: 10px 20px; 
+	color:$hfj-gray; 
+	border:1px solid $hfj-gray; 
+	border-radius: 15px;
+	font-size: 12px;
+	margin-right: 24px;
+	margin-top: 22px;
+	margin-bottom:10px;
+	text-align: left;
+}
+
+// red version
+.button--red {
+	@extend %button;
+	border-color: $hfj-red;
+	&.button--solid {
+		background-color: $hfj-red;
+		color: $white;
+		&:hover, &:focus {
+			color: $red-text;
+		}
+	}
+	&.button--hollow {
+		color: $hfj-red;
+		&:hover, &:focus {
+			background-color: $hfj-red;
+			color: $red-text;			
+		}
+	}
+}
+.button--gray {
+	@extend %button;
+	border-color: $lightish-gray;
+	&.button--solid {
+		background-color: $lightish-gray;
+		&:hover, &:focus {
+			color: $base-font-color;			
+		}
+	}
+	&.button--hollow {
+		color: $base-font-color;
+		&:hover, &:focus {
+			background-color: $white;
+			color: $base-font-color;
+		}
+	}	
+}
+.button--black {
+	@extend %button;
+	border-color: $base-font-color;
+	&.button--solid {
+		background-color: $base-font-color;
+		color: $white;
+		&:hover, &:focus {
+			background-color: transparent;
+			color: $base-font-color;
+		}
+	}
+	&.button--hollow {
+		color: $base-font-color;
+		&:hover, &:focus {
+			background-color: $base-font-color;
+			color: $white;
+		}
+	}
+}
+.button--white {
+	@extend %button;
+	border-color: $white;
+	&.button--solid {
+		background-color: $white;
+		color: $base-font-color;
+		&:hover, &:focus {
+			background-color: transparent;
+			color: $white;
+		}
+	}
+	&.button--hollow {
+		color: $white;
+		&:hover, &:focus {
+			background-color: $white;
+			color: $base-font-color;			
+		}
+	}
+}
+.button--blue {
+	@extend %button;
+	border-color: $blue;
+	&.button--solid {
+		background-color: $blue;
+		color: $white;
+		&:hover, &:focus {
+			color: $blue-text;
+		}
+	}
+	&.button--hollow {
+		color: $blue;
+		&:hover, &:focus {
+			background-color: $blue;
+			color: $blue-text;
+		}
+	}
+}
+
+.button--vermillion {
+	@extend %button;
+	border-color: #E8482E;
+	&.button--solid {
+		background-color: #E8482E;
+		color: $white;
+		&:hover, &:focus {
+			color: $white;
+		}
+	}
+	&.button--hollow {
+		color: $blue;
+		&:hover, &:focus {
+			background-color: $blue;
+			color: $blue-text;
+		}
+	}
+}
+
+
+.button--light-blue {
+	@extend %button;
+	border-color: $light-blue;
+	&.button--solid {
+		background-color: $light-blue;
+		color: $white;
+		&:hover, &:focus {
+			color: $light-blue-text;
+		}
+	}
+	&.button--hollow {
+		color: $light-blue;
+		&:hover, &:focus {
+			background-color: $light-blue;
+			color: $light-blue-text;
+		}
+	}
+}
+
+
+
+
+.button--green {
+	@extend %button;
+	border-color: $green;
+	&.button--solid {
+		background-color: $green;
+		color: $white;
+		&:hover, &:focus {
+			color: $green-text;
+		}
+	}
+	&.button--hollow {
+		color: $green;
+		&:hover, &:focus {
+			background-color: $green;
+			color: $green-text;
+		}
+	}
+}
+.button--orange {
+	@extend %button;
+	border-color: $orange;
+	&.button--solid {
+		background-color: $orange;
+		color: $white;
+		&:hover, &:focus {
+			color: $orange-text;
+		}
+	}
+	&.button--hollow {
+		color: $orange;
+		&:hover, &:focus {
+			background-color: $orange;
+			color: $orange-text;
+		}
+	}
+}
+.button--vipps {
+	@extend %button;
+	border-color: #ff5b24;
+	&.button--solid {
+		background-color: #ff5b24;
+		color: $white;
+	}
+}
+
+
+.button--gold {
+	@extend %button;
+	border-radius: 0;
+	border-color: #cb7439;
+	@include border-image(linear-gradient(45deg, #8c4a11 0%, #f2a16a 50%, #c97430 100%) 10% stretch);
+	&.button--solid {
+        @include linear-gradient(45deg, #8c4a11 0%, #f2a16a 50%, #c97430 100%);
+        color: white;
+        &:hover, &:focus {
+        	color: #f1d9ca;
+        }
+	}
+	&.button--hollow {
+		color: #cb7439;
+		&:hover, &:focus {
+			@include linear-gradient(45deg, #8c4a11 0%, #f2a16a 50%, #c97430 100%);
+			color: white;
+		}
+
+	}
+}
+a.button--gold {
+	color: #cb7439;
+}
+
+
+.button.button--small {
+	line-height: 1.428571429;
+	margin: em(9px) 0;
+}
+
+.button.button--large {
+	@include font-size(18);
+	line-height: 2;
+	margin: em(1px) 0;
+}
+.button.button--block {
+	display:block;
+	width: 100%;
+	text-align: center;
+	padding-left:em(3);
+	padding-right:em(3);
+}
+button.button--hollow {
+	background-color: transparent;
+}
+
+.button--lefthalf {
+	border-radius: $base-border-radius 0 0 $base-border-radius;
+}
+
+.button--righthalf {
+	border-radius: 0 $base-border-radius $base-border-radius 0;
+}
+// button sets
+
+.actions {
+	overflow: hidden;
+	margin-bottom: $half-spacing-unit;
+	.actions__item {
+		display:inline-block;
+		@include font-size($base-font-size);
+		margin-bottom: $half-spacing-unit;
+		& + .actions__item {
+			margin-left: em(3px);
+		}
+	}
+}
+@include mq($from:mobileLandscape) {
+	.actions .actions__item + .actions__item {
+			margin-left: $half-spacing-unit;
+	}
+}
+
+@include mq($from: tablet) {
+	.button--line {font-size: 18px;}
+}
+
+
+
+
+
+

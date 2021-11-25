@@ -1,0 +1,88 @@
+/************************************************
+*  $_GUARDIAN.SCSS
+*************************************************/
+.page-template-page-guardian-uk .inner, .page-template-page-guardian .inner {max-width: $homepage-width;}
+.page-template-page-guardian-uk .site, .page-template-page-guardian .site {background-color:#ffffff;}
+#display-amount:before {content:"£";}
+.page-template-page-guardian-uk .donate-uk__form {margin-top:20px;}
+
+.guardian__hero {
+	width:100%;
+	background-image: url(https://hopeforjustice.org/wp-content/uploads/2019/09/mary-clode-up.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+.guardian__widget {
+   @include span-columns(24);
+   display: flex;
+   margin-bottom: 50px;
+}
+.guardian__row {
+	width:100%;
+	display: flex;
+	flex-direction: column;
+}
+.guardian__describer {
+	text-align: center;
+	@include span-columns(16);
+	@include shift(8);
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-top:50px;
+	margin-bottom: 36px;
+	@include clearfix;
+}
+.guardian__logo {width:304px; margin:0 auto 36px auto;}
+.guardian__text-desktop {display:none;}
+
+
+@include mq($from: mobileLandscape) {
+	@include direction-context(right-to-left) {
+ 		.guardian__text-mobile  {@include span-columns(16);}
+	}
+
+}
+
+// from tablet up
+@include mq($from: tablet) {
+	.guardian .inner {padding:0 50px; width:100%; max-width: $homepage-width;
+}
+	.guardian__text-mobile {
+		@include span-columns(10);
+		margin-top: 550px;
+		margin-left: 0;
+	}
+	@include direction-context(right-to-left) {
+ 		.guardian__widget, .guardian__describer {@include span-columns(13);}
+	}
+	.guardian__describer { margin: 0 0 50px 0;}
+	
+}
+// from desktop 
+@include mq($from: desktop) {
+	.guardian__text-mobile {margin-top: 650px}
+}
+
+// from desktop large 
+@include mq($from: desktopLarge) {
+	.guardian .inner {padding:0 30px;}
+	.guardian__text-mobile {display:none;}
+	.guardian__text-desktop {display:block;}
+	.guardian__widget {margin-top: 50px;}
+ 	@include direction-context(right-to-left) {
+ 		.guardian__widget {@include span-columns(9);margin-top: 95px;}
+ 	}
+ 	.guardian__describer {@include span-columns(9); @include shift(5); padding-top: 120px;}
+
+}
+
+
+
+@include mq($from: desktopXXLarge) {
+	 	@include direction-context(right-to-left) {
+ 		.guardian__widget {@include span-columns(8);}
+ 	}
+ 	.guardian__logo{width:420px; margin-bottom: 60px; margin-top: 20px;}
+ 	.guardian__describer { @include shift(4); @include span-columns(10);}
+}

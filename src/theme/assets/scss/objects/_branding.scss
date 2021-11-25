@@ -1,0 +1,61 @@
+/************************************************
+*  $_BRANDING.SCSS
+*************************************************/
+
+
+
+
+.branding {
+	float: left;
+	margin: em(12px) 0 em(12px);
+	padding-left:2px;
+	#logo {
+		float: left;
+		height: 36px;
+	}
+}
+.branding__text{
+  fill: #2C2926;
+}
+.branding__circle {
+  fill: #CA1517;
+}
+.branding__bird {
+	fill: $white;
+}
+.branding__logo-fallback { 
+  display: none;
+  @include hide-text;
+  @include size(268px 48px);
+}
+.no-svg {
+	#logo {display: none;}
+	.branding__logo-fallback {
+		background: transparent url(assets/img/logo.png) no-repeat 0 0;
+		display: block;
+	}
+}
+
+@include mq($from: mobileLandscape) {
+	.branding {
+		margin: em(18px) 0 em(14px);			
+		#logo {
+			height:48px;
+		}
+	}
+}
+
+// everything from smartphone landscape up - full size
+@include mq($from: desktop) {
+	.branding {
+		margin: em(18px) 0 em(14px);			
+		#logo {
+			height: 48px;
+		}
+	}
+
+}
+
+
+
+

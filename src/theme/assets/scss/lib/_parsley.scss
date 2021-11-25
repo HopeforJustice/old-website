@@ -1,0 +1,33 @@
+/********************************
+*  _PARSLEYJS.SCSS
+*********************************/
+.parsley-errors-list {
+  
+  padding: 0;
+  list-style-type: none;
+  opacity: 0;
+  -moz-opacity: 0;
+  -webkit-opacity: 0;
+  color: $red;
+  @include transition(all .3s ease-in);
+  li {
+	margin: em(11px) 0 em(10px) 0;  	
+	background-color: lighten($red,40%);
+	color: $red-text;
+	padding: em(3px) em(7px);
+	margin-bottom: $half-spacing-unit;
+	border-radius: $base-border-radius;
+  }
+
+}
+
+.parsley-errors-list.filled {
+  opacity: 1;
+}
+
+textarea,
+#{$all-text-inputs}, {
+  &.parsley-error {
+    border-color: $red;
+  }
+}

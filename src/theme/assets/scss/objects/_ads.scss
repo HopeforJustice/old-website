@@ -1,0 +1,74 @@
+/********************************
+*  _ADS.SCSS
+*********************************/
+
+.ad {
+	background: $base-body-color;
+	display: block;
+	margin-bottom: $base-spacing-unit;
+	position: relative;
+	z-index:$z-background;
+	height: em(263px);
+	overflow: hidden;
+	text-align: center;
+	&:hover {
+		.ad__image {
+			@include transform(scale(1));
+			opacity: 1;
+		}
+		.ad__text {
+			@include transform(translate3d(0, 0,0));
+		}
+		.ad__arrow {
+			@include transform(translate3d(0, 0,0));
+			opacity: 1;
+		}
+	}
+	&.ad--small {
+		height: em(183px);
+	}
+}
+.ad__image {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	min-width: 100%;
+	opacity: 0.6;
+	max-width: none;
+	@include transition-property(opacity, transform);
+	@include transition-duration(.3s);
+	@include transition-timing-function(ease-in);
+	//@include transform(translate3d(-20px, 0,0));
+	@include transform(scale(1.1));
+}
+.ad__text {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	color: $white;
+	-webkit-font-smoothing: antialiased;
+	margin: 0;
+	top: em(90px);
+	padding: 0 em(10px);
+	@include transform(translate3d(0, 20px,0));
+	@include transition-property(opacity, transform);
+	@include transition-duration(.3s);
+	@include transition-timing-function(ease-in);		
+	h3 {
+		margin: 0;
+	}
+}
+.ad--small .ad__text {
+	top: em(60px);
+	padding: 0 em(10px);
+}
+
+.ad__arrow {
+	@include font-size(24);
+	@include transform(translate3d(0, -20px,0));
+	@include transition-property(opacity, transform);
+	@include transition-duration(.3s);
+	@include transition-timing-function(cubic-bezier);	
+	opacity: 0;
+
+}

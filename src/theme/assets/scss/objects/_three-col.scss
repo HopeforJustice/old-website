@@ -1,0 +1,12 @@
+/*******************************************************************************
+*  	$_THREE-COL	
+********************************************************************************/
+.three-col {
+	text-align: center;
+	.three-col__image {
+		margin-bottom: $base-spacing-unit;
+	}
+	.three-col__content {
+		h4 {margin-top: 0;}
+	}
+}

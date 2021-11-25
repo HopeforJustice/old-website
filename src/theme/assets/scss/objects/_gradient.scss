@@ -1,0 +1,30 @@
+/*******************************************************************************
+*  	$_GRADIENT
+********************************************************************************/
+
+.gradient--white {
+background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+z-index: 0;
+position: relative;
+}
+
+.gradient--bottom-top {
+	transform: rotate(180deg);
+}
+
+.gradient--100 {
+	height:100px;
+	margin-top: -100px;
+}
+
+.gradient--200 {
+	height:200px;
+	margin-top: -200px;
+}
+
+.gradient--300 {
+	height:300px;
+	margin-top: -300px;
+}

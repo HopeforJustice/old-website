@@ -1,0 +1,180 @@
+/********************************
+*  _DEFAULT.SCSS
+*********************************/
+body {
+	background-color: $base-body-color;
+}
+#content {
+	position: relative;
+}
+.site-content {
+	padding-top: em(60px);
+}
+
+.site-content--pushed {
+	padding-top: em(175px);
+}
+.outer {
+	@include row();
+	background-color: $white;
+	display: block;
+	position: relative;
+	z-index: $z-content;
+}
+.outer--single {
+	@extend .outer;
+	padding-top: $base-spacing-unit;
+	padding-bottom : $base-spacing-unit;
+}
+.outer--double {
+	@extend .outer;
+	padding-top: $base-spacing-unit *2;
+	padding-bottom: $base-spacing-unit *2;
+}
+.outer--dark {
+	background-color: $base-body-color;	
+	color: $white;
+
+}
+
+.inner {
+  @include outer-container;
+  padding: 0 em(10px);
+  z-index: $z-content;
+}
+
+.row {
+	@include row();
+}
+
+// Standard column constructions
+///////////////////////////////////////////////////////////////////////////////
+
+// at the basic level all "splits" are full width
+.col, .colspan-2, .colspan-3, .colcenter-10 {
+	@include span-columns(24);
+	min-height: 1px;
+	margin-bottom: $base-spacing-unit;
+}
+.colgroup-2, .colgroup-3, .colgroup-4, .colgroup-5{
+	@include row();
+}
+
+
+// small screens
+@include mq($from: mobileLandscape, $until: tablet) {
+
+	.col, .colspan-2, .colspan-3, .colcenter-10 {
+		min-height: 1px;
+	}	
+	.colgroup-4 .col {
+		@include span-columns(12);
+		@include omega(2n);
+	}
+	.colcenter-10 {
+		@include span-columns(16);
+		@include shift(4);
+	}	
+	.colgroup-3 .colspan-2 .col {
+		@include span-columns(8 of 16);
+	}
+}
+// everything from tablet portrait up
+@include mq($from: tablet) {
+
+	.site-content--pushed {
+		padding-top: em(120px);
+	}
+	.col, .colspan-2, .colspan-3, .colcenter-10 {
+		min-height: 1px;
+		margin-bottom: 0;
+	}
+	.colgroup-2 {
+		.col {
+			@include span-columns(12);			
+		}
+		&.narrow .col {
+			@include span-columns(11);			
+		}
+	}
+	.colgroup-3 {
+		.col {
+			@include span-columns(8);
+			@include omega(3n);
+		}
+		.colspan-2 {
+			@include span-columns(16);
+			.col {
+				@include span-columns(8 of 16);
+			}
+		}
+		&.narrow .col {
+			@include span-columns(22/3);
+			@include omega(3n);
+		}
+	}
+	.colgroup-4 {
+		.col {
+			@include span-columns(6);
+			@include omega(4n);
+		}
+		.colspan-2 {
+			@include span-columns(12);
+		}
+		.colspan-3 {
+			@include span-columns(18);
+		}
+		&.narrow .col {
+			@include span-columns(22/4);
+		}
+	}
+
+	.flex {
+		display: flex;
+	}
+
+
+
+	.colgroup-2.narrow .col:first-child, .colgroup-2.narrow .col--first, .colgroup-3.narrow .col:first-child, .colgroup-3.narrow .col--first, .colgroup-4.narrow .col:first-child, .colgroup-4.narrow .col--first {
+		@include shift(1);
+	}
+	.colcenter-10 {
+		@include span-columns(10);
+		@include shift(7);
+	}
+	.colcenter-20 {
+		@include span-columns(20);
+		@include shift(2);
+	}
+
+
+
+}
+
+// colxs is a later addition to create columns that don't collapse at small screen-sizes. 
+.colxs-2, .colxs-3 {
+	@include row();
+}
+.colxs-2 {
+	.col {
+		@include span-columns(12);
+		@include omega(2n);
+		margin-bottom: 0;
+	}
+}
+.colxs-3 {
+	.col {
+		@include span-columns(8);
+		@include omega(3n);
+		margin-bottom: 0;		
+	}
+	.colspan-2 {
+		@include span-columns(16);
+		margin-bottom: 0;		
+	}
+}
+
+// may need to move this insde the colgroups to make it more specific?
+.col--last {
+	margin-right: 0;
+}

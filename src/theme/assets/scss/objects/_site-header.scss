@@ -1,0 +1,37 @@
+
+// Branding
+///////////////////////////////////////////////////////////////////////////////
+
+.site-header {
+	background-color: $white;
+	border-bottom: 1px solid $base-border-color;
+	z-index: $z-header;
+	position: fixed;
+	right: 0;
+	left: 0;
+	top: 0;
+}
+
+// fix for the admin bar overlaying the navigation
+body.admin-bar .site-header {
+  top: 32px;
+}
+
+.headroom {
+	@include animation-duration(.3s);
+	@include animation-fill-mode(both);
+}
+
+
+.headroom.animated.headroom--pinned {
+	@include animation-name(slideDown);
+}
+
+.headroom.animated.headroom--unpinned {
+	@include animation-name(slideUp);
+}
+
+.pushy-active .headroom--unpinned, .pushy-active .headroom--pinned {
+	left: -200px;
+	right: 200px;
+}

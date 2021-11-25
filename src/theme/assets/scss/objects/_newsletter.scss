@@ -1,0 +1,12 @@
+/************************************************
+*  $_NEWSLETTER.SCSS
+*************************************************/
+// newsletter features on the news page for newsletter signup
+.newsletter {
+	input.large {
+		margin-bottom: $base-spacing-unit/4;
+	}
+	.gform_footer {
+		text-align: right;
+	}
+}

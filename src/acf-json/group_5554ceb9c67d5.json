@@ -1,0 +1,79 @@
+{
+    "key": "group_5554ceb9c67d5",
+    "title": "Modal",
+    "fields": [
+        {
+            "key": "field_54086f9d6eff6",
+            "label": "Modal title",
+            "name": "modal_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "formatting": "html",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_54086fa56eff7",
+            "label": "Modal content",
+            "name": "modal_content",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "toolbar": "full",
+            "media_upload": 1,
+            "tabs": "all",
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "762"
+            }
+        ],
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "763"
+            }
+        ],
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "1863"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1534520750
+}

@@ -1,0 +1,56 @@
+/************************************************
+*  $_BRCKGROUND-VIDEO.SCSS
+*************************************************/
+
+
+//mobile 
+
+.ytp-chrome-top, .ytp-show-watch-later-title, .ytp-share-button-visible, .ytp-show-share-title, .ytp-show-cards-title, .__web-inspector-hide-shortcut__ {display:none!important;}
+
+.background-video__iframe {
+    display:none;
+}
+
+@include mq($from: desktopLarge) {
+.background-video{
+    background: #000000;
+    position: fixed;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: -99;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    opacity: 1;
+}
+
+.background-video__inner {
+	position: relative;
+	padding-bottom: 56.25%; /*  16:9 */
+	height: 0;
+}
+
+.background-video__iframe {
+    position: absolute;
+    top: -55px; 
+    //left: -10%;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    display: block;
+    opacity:1;
+}
+
+.background-video::after {
+    content:"";
+    display: block;
+    width: 100%;
+    height:100%;
+    background-color:#000000;
+    opacity: 0.2;
+    position: absolute;
+    top:0;
+    z-index: -98;
+}
+}
+
+
+
+

@@ -1,0 +1,74 @@
+/************************************************
+*  $_21FOR21.SCSS
+*************************************************/
+
+#donation21for21-us {
+	.twentyone {
+		padding: $base-spacing-unit 0;
+		&__tab {
+			display: block;
+		}
+		&__tab-set {
+			display: none;
+		}
+		&__content-wrapper {
+			text-align: center;
+		}
+		&__content {
+			display: inline-block;
+			.donation-form {
+				display: none;
+			}
+			&--monthly .donation-form__button {
+				margin-right: $base-spacing-unit;
+			}
+		}
+		&__other--hidden {
+			display: none;
+		}
+
+
+		&--tabs {
+			.donation-form {
+				vertical-align: middle;
+			}
+			.twentyone__tab-set {
+				display: block;
+				padding: 0 $half-spacing-unit $half-spacing-unit $half-spacing-unit;
+			}
+			.donation-form__button {
+				display: none;
+				margin: 0 0 $half-spacing-unit 0;
+			}
+			.twentyone__content {
+				display: none;
+				&--active {
+					display:inline-block;
+					.donation-form {
+						display: inline-block;
+					}
+					.donation-form__button {
+						display: inline-block;
+						vertical-align: middle;
+
+					}
+				}					
+			}
+
+		}
+	}
+}
+#donation21for21-no {
+	.donate1 {
+		box-shadow: none;
+	}
+}
+@include mq($from: mobileLandscape) {
+	#donation21for21-us {	
+		.twentyone {
+			&__tab {
+				display:inline-block;
+			}
+		}
+	}
+}

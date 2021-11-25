@@ -1,0 +1,29 @@
+/************************************************
+*  $_SEARCH-FORM.SCSS
+*************************************************/
+.search-form {
+	&__input-wrapper {
+		@include span-columns(16);
+	}
+	input[type='search'].search-form__input {
+		@include font-size(13);
+		margin: 0;
+	}
+	&__action {
+		@include span-columns(8);
+	}
+	&__button {
+		margin-top: 0;
+	}
+}
+// everything from tablet portrait up
+@include mq($from: tablet) {
+	.search-form {
+		&__input-wrapper {
+			@include span-columns(8);
+		}
+		&__action {
+			@include span-columns(4)
+		}
+	}
+}

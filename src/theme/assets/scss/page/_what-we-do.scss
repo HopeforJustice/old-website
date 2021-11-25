@@ -1,0 +1,118 @@
+/************************************************
+*  $_WHAT-WE-DO.SCSS
+*************************************************/
+// http://hopeforjustice.org/what-we-do
+
+.where-we-work__map {
+	background: transparent url(/wp-content/uploads/2014/08/where-we-work__map.png) 50% 50%;
+	background-size: cover;
+	@include size(300px 176px);
+	margin: 0 auto;
+	position: relative;
+}
+.where-we-work__pin__left, .where-we-work__pin__right {
+	position:absolute;
+	background-color: $blue;
+	color: $white;
+	@include font-size(18);
+	font-weight:700;
+	padding: 0 em(8px, 18);
+	line-height: 1.25;
+	&:after {
+		content: '';
+		position: absolute;
+		top: 100%;
+		right: 0;
+	}
+	&:before {
+		background-color: $white;
+		content: '';
+		border-radius: 50%;
+		position: absolute;
+		right: -10px;
+		bottom: -20px;
+		@include size(20px 20px);
+		@include animation(pulse 2s ease-in-out infinite);
+	}
+	&:hover {
+		@include transform(translate(0,-5px));
+		@include transition(all .2s ease-in-out);
+		&:before {
+			bottom: -25px;
+			@include transition(all .2s ease-in-out);			
+		}
+	}
+}
+.where-we-work__pin__right:after {
+	@include triangle(10px 10px, $blue, up-right);
+}
+.where-we-work__pin__left {
+	&:after {
+		@include triangle(10px 10px, $blue, up-left);
+		left: 0;
+	}
+	&:before {
+		left: -10px;
+	}
+}
+.where-we-work__pin__cambodia {
+	left: 47%;
+	top: 38%;
+
+}
+.where-we-work__pin__usa {
+	left: 6%;
+	top: 27%;
+}
+.where-we-work__pin__uk {
+	left: 34%;
+	top: 18%;
+}
+.where-we-work__pin__norway {
+	left: 49%;
+	top: 23%;
+}
+
+// smartphone to tablet portrait
+@include mq($from: mobileLandscape, $until: tablet) {
+	.where-we-work__map {
+		@include size(460px 270px);
+	}
+	.where-we-work__pin__cambodia {
+		left: 57%;
+		top: 45%;
+
+	}
+	.where-we-work__pin__usa {
+		left: 13%;
+		top: 35%;
+	}
+	.where-we-work__pin__uk {
+		left: 38%;
+		top: 24%;
+	}	
+}
+// everything from tablet portrait up
+@include mq($from: tablet) {
+	.where-we-work__map {
+		@include size(881px 517px);
+	}
+	.where-we-work__pin__left, .where-we-work__pin__right {
+		@include font-size(24);
+		padding: 0 em(8px, 24);			
+	}
+	.where-we-work__pin__cambodia {
+		left: 64%;
+		top: 49%;
+
+	}
+	.where-we-work__pin__usa {
+		left: 17%;
+		top: 39%;
+	}
+	.where-we-work__pin__uk {
+		left: 42%;
+		top: 28%;
+	}	
+}
+

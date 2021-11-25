@@ -1,0 +1,192 @@
+/********************************
+*  _FLEXSLIDER.SCSS
+*********************************/
+/*
+ * jQuery FlexSlider v2.2.0
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the GPLv2 license.
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Contributing author: Tyler Smith (@mbmufffin)
+ */
+
+
+/* Browser Resets
+*********************************/
+.flex-container a:active,
+.flexslider a:active,
+.flex-container a:focus,
+.flexslider a:focus  {outline: none;}
+.slides,
+.flex-control-nav,
+.flex-direction-nav {margin: 0; padding: 0; list-style: none;}
+
+
+/* FlexSlider Necessary Styles
+*********************************/
+.flexslider {
+	margin: 0; 
+	padding: 0;
+	.slides {
+		> li {
+			display: none; 
+			-webkit-backface-visibility: hidden;
+		} /* Hide the slides before the JS is loaded. Avoids image jumping */
+		img {width: 100%; display: block;}
+		&:after {
+			@include clearfix();
+		}
+	}
+}
+
+.flex-pauseplay span {text-transform: capitalize;}
+
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+.no-js .slides > li:first-child {display: block;}
+
+/* FlexSlider Themes
+*********************************/
+// flexslider is the default theme; trislider is the 3 x carousel format used on Hope News
+.flexslider {
+	margin: 0 0 60px; 
+	position: relative;
+ 	zoom: 1;
+	.slides { zoom: 1; }
+}
+.trislider {
+	position: relative;
+	zoom:1;
+	.slides {zoom: 1;}
+}
+.flex-viewport {
+	max-height: 2000px; 
+	@include transition(all 1s ease);
+}
+.loading .flex-viewport {
+	max-height: 300px; 
+}
+.carousel li { margin-right: 21px; }
+
+/* Direction Nav */
+.flex-direction-nav {
+	*height: 0;
+	a { 
+		text-decoration:none; 
+		display: block; 
+		width: 50px; 
+		height: 50px; 
+		margin: -25px 0 0; 
+		position: absolute; 
+		top: 50%; 
+		z-index: 10; 
+		overflow: hidden; 
+		opacity:0.7; 
+		cursor: pointer; 
+		color: rgba(255,255,255,0.8); 
+		//text-shadow: 1px 1px 0 rgba(255,255,255,0.3); 
+		@include transition(all .3s ease);
+		&:before {
+			@extend [class^="gi-"]:before;
+			@include font-size(50);
+			line-height: 1;
+			display: inline-block;
+			content: '\E603';
+		}
+		&.flex-next:before {
+			content: '\E604'; 
+		}
+	}
+	.flex-prev { 
+		left: -50px; 
+		&:hover {
+			opacity: 1;
+		}
+	}
+	.flex-next { 
+		right: -50px; 
+		text-align: right; 
+		&:hover {
+			opacity: 1;
+		}
+	}
+	.flex-disabled { opacity: 0!important; filter:alpha(opacity=0); cursor: default; }
+}
+
+// .flexslider {
+// 	&:hover {
+// 		.flex-prev { opacity: 0.7; left: -55px; }
+// 		.flex-next { opacity: 0.7; right: -55px; }
+// 		.flex-next:hover, .flexslider:hover .flex-prev:hover { opacity: 1; }
+// 	}
+// }
+
+
+/* Control Nav */
+.flex-control-nav {
+	width: 100%; 
+	position: absolute; 
+	bottom: -40px; 
+	text-align: center;
+	li {
+		margin: 0 em(6px); 
+		display: inline-block; 
+		zoom: 1; 
+		*display: inline;
+		a {
+			width: 11px; 
+			height: 11px; 
+			display: block; 
+			background: #666; 
+			background: rgba(0,0,0,0.5); 
+			cursor: pointer; 
+			text-indent: -9999px; 
+			border-radius: 20px;
+			box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+			&:hover {
+				background: #333; 
+				background: rgba(0,0,0,0.7);
+			}
+			&.flex-active {
+				background: #000; 
+				background: rgba(0,0,0,0.9); 
+				cursor: default; 
+			}
+		}
+	}
+}
+
+.flex-control-thumbs {
+	margin: em(5px) 0 0; 
+	position: static; 
+	overflow: hidden;
+	li {
+		width: 25%; 
+		float: left; 
+		margin: 0;
+	}
+	img {
+		width: 100%; 
+		display: block; 
+		opacity: .7; 
+		cursor: pointer;
+		&:hover {
+			opacity: 1;
+		}
+	}
+	.flex-active {
+		opacity: 1; 
+		cursor: default;
+	}
+}
+
+
+
+@include mq($until: tablet) {
+  .flex-direction-nav .flex-prev { opacity: 1; left: 10px;}
+  .flex-direction-nav .flex-next { opacity: 1; right: 10px;}
+}

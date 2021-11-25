@@ -1,0 +1,199 @@
+{
+    "key": "group_5bc752c84d90e",
+    "title": "News Items",
+    "fields": [
+        {
+            "key": "field_5bc752d62be3b",
+            "label": "news1",
+            "name": "news1",
+            "type": "text",
+            "instructions": "The news title goes here.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5bc753342be3c",
+            "label": "news1 link",
+            "name": "news1_link",
+            "type": "url",
+            "instructions": "The news link goes here.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5bc753802be3e",
+            "label": "news2",
+            "name": "news2",
+            "type": "text",
+            "instructions": "The news title goes here.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5bc7541c2be42",
+            "label": "news2 link",
+            "name": "news2_link",
+            "type": "url",
+            "instructions": "The news link goes here.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5bc753bf2be3f",
+            "label": "news3",
+            "name": "news3",
+            "type": "text",
+            "instructions": "The news title goes here.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5bc754342be43",
+            "label": "news3 link",
+            "name": "news3_link",
+            "type": "url",
+            "instructions": "The news link goes here.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5bc753ed2be40",
+            "label": "news4",
+            "name": "news4",
+            "type": "text",
+            "instructions": "The news title goes here.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5bc754492be44",
+            "label": "news4 link",
+            "name": "news4_link",
+            "type": "url",
+            "instructions": "The news link goes here.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5bc753ff2be41",
+            "label": "news5",
+            "name": "news5",
+            "type": "text",
+            "instructions": "The news title goes here.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5bc754622be45",
+            "label": "news5 link",
+            "name": "news5_link",
+            "type": "url",
+            "instructions": "The news link goes here.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1541587659
+}

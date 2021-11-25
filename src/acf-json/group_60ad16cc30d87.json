@@ -1,0 +1,566 @@
+{
+    "key": "group_60ad16cc30d87",
+    "title": "Raise a glass",
+    "fields": [
+        {
+            "key": "field_60ad1a69589d3",
+            "label": "Page",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_60ad1de0e0651",
+            "label": "Background image",
+            "name": "background",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_60ad1b63f1b23",
+            "label": "Page title",
+            "name": "title",
+            "type": "text",
+            "instructions": "Title for the page. Include a break tag (&lt;br&gt;) to split it into two lines for aesthetics e.g.  \"Tonight your dollars &lt;br&gt; turn into freedom\"",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_60ad1e2dc68e5",
+            "label": "Page description",
+            "name": "description",
+            "type": "textarea",
+            "instructions": "Description for the page e.g.  \"Each donation pushes us towards the goal of more prevention and rescue, so no call goes unanswered, and every life gets a chance at freedom.\"",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_60ad16ee874b0",
+            "label": "Cards",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_60ad1cb9a79ce",
+            "label": "",
+            "name": "cards",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "sub_fields": [
+                {
+                    "key": "field_60ad1723874b1",
+                    "label": "Card 1",
+                    "name": "card_1",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60ad1765874b2",
+                            "label": "Card 1 price",
+                            "name": "card_1_price",
+                            "type": "text",
+                            "instructions": "Price shown to the user with currency symbol e.g. $3,000",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_60ad17b3874b3",
+                            "label": "Card 1 text",
+                            "name": "card_1_text",
+                            "type": "text",
+                            "instructions": "Text value to be used on the form pop up. Giving $[text value] once e.g. 3,000",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_60ad1f7e583ee",
+                            "label": "Card 1 description",
+                            "name": "card_1_description",
+                            "type": "text",
+                            "instructions": "Description for the card e.g. Could fund an entire investigation from rescue to prosecution.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_60ad183e874b4",
+                            "label": "Card 1 value",
+                            "name": "card_1_value",
+                            "type": "number",
+                            "instructions": "The actual financial value of the card. No symbols or commas just the number e.g. 3000",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "min": "",
+                            "max": "",
+                            "step": ""
+                        }
+                    ]
+                },
+                {
+                    "key": "field_60ad18cb874b5",
+                    "label": "Card 2",
+                    "name": "card_2",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60ad18cc874b6",
+                            "label": "Card 2 price",
+                            "name": "card_2_price",
+                            "type": "text",
+                            "instructions": "Price shown to the user with currency symbol e.g. $3,000",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_60ad18cc874b7",
+                            "label": "Card 2 text",
+                            "name": "card_2_text",
+                            "type": "text",
+                            "instructions": "Text value to be used on the form pop up. Giving $[text value] once e.g. 3,000",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_60ad1fb2583ef",
+                            "label": "Card 2 description",
+                            "name": "card_2_description",
+                            "type": "text",
+                            "instructions": "Description for the card e.g. Could fund an entire investigation from rescue to prosecution.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_60ad18cc874b8",
+                            "label": "Card 2 value",
+                            "name": "card_2_value",
+                            "type": "number",
+                            "instructions": "The actual financial value of the card. No symbols or commas just the number e.g. 3000",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "min": "",
+                            "max": "",
+                            "step": ""
+                        }
+                    ]
+                },
+                {
+                    "key": "field_60ad1985d3931",
+                    "label": "Card 3",
+                    "name": "card_3",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60ad1985d3932",
+                            "label": "Card 3 price",
+                            "name": "card_3_price",
+                            "type": "text",
+                            "instructions": "Price shown to the user with currency symbol e.g. $3,000",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_60ad1985d3933",
+                            "label": "Card 3 text",
+                            "name": "card_3_text",
+                            "type": "text",
+                            "instructions": "Text value to be used on the form pop up. Giving $[text value] once e.g. 3,000",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_60ad1ffa583f0",
+                            "label": "Card 3 description",
+                            "name": "card_3_description",
+                            "type": "text",
+                            "instructions": "Description for the card e.g. Could fund an entire investigation from rescue to prosecution.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_60ad1985d3934",
+                            "label": "Card 3 value",
+                            "name": "card_3_value",
+                            "type": "number",
+                            "instructions": "The actual financial value of the card. No symbols or commas just the number e.g. 3000",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "min": "",
+                            "max": "",
+                            "step": ""
+                        }
+                    ]
+                },
+                {
+                    "key": "field_60ad19cb02e7c",
+                    "label": "Card 4",
+                    "name": "card_4",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_60ad19cb02e7d",
+                            "label": "Card 4 price",
+                            "name": "card_4_price",
+                            "type": "text",
+                            "instructions": "Price shown to the user with currency symbol e.g. $3,000",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_60ad19cb02e7e",
+                            "label": "Card 4 text",
+                            "name": "card_4_text",
+                            "type": "text",
+                            "instructions": "Text value to be used on the form pop up. Giving $[text value] once e.g. 3,000",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_60ad2037583f1",
+                            "label": "Card 4 description",
+                            "name": "card_4_description",
+                            "type": "text",
+                            "instructions": "Description for the card e.g. Could fund an entire investigation from rescue to prosecution.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_60ad19cb02e7f",
+                            "label": "Card 4 value",
+                            "name": "card_4_value",
+                            "type": "number",
+                            "instructions": "The actual financial value of the card. No symbols or commas just the number e.g. 3000",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "min": "",
+                            "max": "",
+                            "step": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "field_60ad1f08c9461",
+            "label": "Form",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_60ad1ec4c9460",
+            "label": "Donation form",
+            "name": "form",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_60ad1b4bf1b22",
+            "label": "",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates\/page-raise-a-glass.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1621962599
+}

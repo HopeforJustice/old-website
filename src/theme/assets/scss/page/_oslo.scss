@@ -1,0 +1,11 @@
+/************************************************
+*  $_extreme.SCSS
+*************************************************/
+
+.page-template-page-hope-challenge-oslo {background-color: white;}
+
+// change width
+@include mq($from: tablet) {
+.page-template-page-hope-challenge-oslo .inner {max-width: $homepage-width; padding: 0 40px 0 40px;}
+}
+

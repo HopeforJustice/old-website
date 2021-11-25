@@ -1,0 +1,101 @@
+/********************************
+*  _FOOTER.SCSS
+*********************************/
+.footer {
+	padding-bottom: 50px;
+	background-color: #252525;
+}
+.footer__divider {
+	border-top: 2px solid $dark-gray;
+	padding-top: $base-spacing-unit;
+	margin-top: $base-spacing-unit;
+	margin-bottom: 3*$base-spacing-unit;
+}
+.footer__nav {
+	@include span-columns(24);
+	margin-bottom: $half-spacing-unit;
+}
+.footer__colophon {
+	@include span-columns(24);
+	position: relative;
+	z-index: $z-content;
+	min-height: em(112px);
+	display:flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.footer__circle {width:70px;}
+.footer__fundraising {width:133px;}
+
+.footer__nav-title {
+	@include font-size(29);
+	line-height: 1.137931034;
+	margin: 0;
+}
+.footer__links {
+	@include font-size(16);
+	line-height: 1.375;
+	.menu-item a {
+		color: $medium-gray;
+	}
+}
+
+.footer__social {
+ 	margin-top: $base-spacing-unit*1.5;
+	a {
+		@include font-size(26);
+		color: $light-gray;
+		line-height: 1.269230769;
+		margin-right: em(22px, 26);
+		&:hover {
+			color: $white;
+		}
+	}
+}
+.footer__subscribe {
+	margin-top: $base-spacing-unit*1.5;
+	text-align: right;
+}
+.footer__site-info, .footer__cookies {
+	color: $medium-gray;
+	display: block;
+	text-align: center;
+	margin-bottom: $half-spacing-unit;
+	a {
+		color: $medium-gray;
+		text-decoration: underline;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+// small screens only
+@include mq($from: mobileLandscape, $until: tablet) {
+
+}
+// everything from tablet portrait up
+@include mq($from: tablet) {
+	.footer__nav {
+		@include span-columns(5);
+	}	
+	.footer__colophon {
+		@include span-columns(9);
+		display: flex;
+		justify-content: flex-end;
+	}
+	.footer__circle {width:70px; margin-left: 15px;}
+	.footer__fundraising {width:133px; margin-left: 15px;}	
+}
+@include mq($from:desktop) {
+	.footer__subscribe {
+		.gfield {
+			@include span-columns(9 of 12);
+		}
+		.gform_footer {
+			@include span-columns(3 of 12);
+		}
+	}
+}

@@ -1,0 +1,287 @@
+/*******************************************************************************
+*  	$.donate-uk used for donorfy widget page
+********************************************************************************/
+//hide the honeypot field
+#honey {display: none;} 
+
+//removes previous button on first step
+.wizard > .actions > ul > li.disabled {display: none;}
+//post code anywhere adjustment
+.pca {width:200px; overflow:scroll;}
+//hacky width modification
+.page-id-2960 .inner, .page-id-6108 .inner, .page-id-762 .inner, .page-id-763 .inner, .page-id-6464 .inner, .page-id-6581 .inner {max-width: $homepage-width; width:100%;}
+//amount padding adjustment
+.page-id-762 #Amount, .page-id-6108 #Amount, .page-id-2960 #Amount, .page-id-763 #Amount, .page-id-6464 #Amount, .page-id-6581 #Amount {padding-left:30px;}
+.page-id-762 #givingAmountLink, .page-id-6108 #givingAmountLink, .page-id-2960 #givingAmountLink, .page-id-763 #givingAmountLink, .page-id-6464 #givingAmountLink {display: none; margin: 10px 0; margin-top:0;}
+.page-id-762 #display, .page-id-6108 #display, .page-id-2960 #display, .page-id-763 #display {margin: 0 4px;}
+.page-id-762 #display::before, .page-id-2960 #display::before {content:"£";}
+.page-id-6108 #display::before, .page-id-763 #display::before, .page-id-6464 #display::before {content:"$";}
+ #display-amount-us::before {content:"$";}
+//step buttons
+.wizard > .actions > ul li {text-align: center; }
+.donate-uk__spacemob {display:flex; justify-content: space-between;}
+//error adjustments
+.donate-uk__wrapper input.error {color:red; border: 1px dotted red;}
+.donate-uk__wrapper label.error {color:red; border: none; font-size: 12px; font-weight: 100;}
+.donate-uk__errorTxt {color:red; text-align: left;}
+.donate-uk__errorTxt > #Amount-error {text-align: center;}
+//gravity form adjustments
+#input_6_1 {padding-left: 30px; width:200px; margin: 0 auto;}
+#field_6_1 {width:200px; margin: 0 auto;}
+.gform_footer{display: flex; justify-content: center;}
+#gform_submit_button_6 {margin-top:20px;}//change for desktop
+
+//making checkboxes look a bit better
+.donate-uk__pref {display:flex;}
+.donate-uk__pref label {margin-left:15px; font-size:16px;}
+.donate-uk__pref label:nth-child(1) {margin-left:0px;}
+.donate-uk__pref label input{margin-right:2px;}
+
+.vipps-button-logo {
+	width: 48px;
+    transform: translateY(2px);
+    margin-left: 5px;
+}
+
+.vipps-logo-modal {
+	margin-bottom: 20px;
+	width:100px;
+}
+
+.donate-uk__input {
+    box-sizing: border-box;
+    -webkit-transition: border-color;
+    -moz-transition: border-color;
+    transition: border-color;
+    background-color: #fff;
+    color: #404040;
+    border: 1px solid #c7c9c7;
+    border-radius: .357142857em;
+    font-family: "lato",Lato,sans-serif;
+    font-size: 18px;
+    font-size: 1.2857142857rem;
+    line-height: 1.222222222;
+    height: 2.2222222222em;
+    margin-bottom: .75em;
+    padding: .4444444444em;
+    width: 100%;}
+
+
+//removing the default submit button that comes with the widget
+.donate-uk__submit{display: none;}
+
+//removing titles of steps
+.steps {display:none;}
+.donate-uk__hidden {display:none;}
+
+
+//page styles
+.donate-uk__modal-trig {text-align: center;}
+
+.donate-uk__button-container {
+	display: flex;
+	justify-content: center;
+}
+
+.donate-uk__watch-video {
+	display: flex; 
+	justify-content: center; 
+	width: calc(100% + 10px);
+	background-color:white;
+	padding: 5px 0;
+	position: absolute;
+	bottom:0;
+	left: -10px;
+}
+
+.donate-uk__link {text-decoration: none; color: $orange;}
+.donate-uk__giftaid {margin-top: 35px;}
+
+.donate-uk {
+	position: relative;
+	min-height: calc(100vh - 75px);
+	background-position: 21% 200px;
+	background-repeat: no-repeat;
+	background-color:white;
+	background-image: url(https://hopeforjustice.org/wp-content/uploads/2019/06/guardian-web-optimised.jpg);
+}
+.page-id-2960 .donate-uk {background-position: 19% 200px;}
+
+.donate-uk__secondimg {background-image: url(https://hopeforjustice.org/wp-content/uploads/2019/06/guardian-web-optimised-alt.jpg);}
+
+.donate-uk__noback {background-image:none;}
+
+.donate-uk__msgheader {font-size:22px; margin-bottom: 20px;}
+.donate-uk__msgp {padding:0}
+.donate-uk__options {margin-bottom: 15px;}
+.donate-uk__orange {color:$orange;}
+.donate-uk__gradient {width: 100%; position: absolute; min-height: 100%; margin-left: -10px;}
+.go_cardlesstext {font-size: 12px;}
+.donate-uk__yes {margin-top:20px; margin-bottom:12px;}
+.donate-uk__modaltrig {
+	font-size:12px;
+	position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    background-color: $orange;
+    color:white;
+}
+
+
+.donate-uk__wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.donate-uk__message {
+	text-align: center;
+	padding: 40px 0px 25px 0px;
+	max-width: 420px;
+	margin: 0 auto;
+}
+
+.donate-uk__form {
+	width:100%;
+}
+
+.donate-uk__select{
+	width:100%;
+	z-index: 1;
+	padding: 0 10px 0 10px;
+	overflow: auto;
+	padding-bottom: 20px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.donate-uk__currency {
+	font-size: 12px;
+	text-align: center;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	text-decoration: underline;
+	cursor: pointer;
+	a{color:#333; opacity: 0.3;}
+}
+
+.donate-uk__amount__inner {
+	width: 200px;
+	margin: 0 auto;
+}
+
+.donate-uk__amount__inner:before {
+	content: '£';
+    position: absolute;
+    padding-top: .4444444444em;
+    padding-left: .6666666667em;
+    color: #999;
+    font-size: 18px;
+    font-size: 1.2857142857rem;
+    line-height: 1.222222222;
+}
+
+.donate-uk__amount__inner--us:before {content: '$';}
+.donate-uk__amount__inner--no:before {content: 'kr';}
+
+.donate-uk__form--hidden {display:none;}
+
+.donate-uk__options {
+	display: flex;
+	justify-content: center;
+}
+
+.donate-uk__formwrap {width:100%; overflow: hidden;}
+.donate-uk__msgwrap {width:100%;}
+.donate-uk__comment {margin-top: 10px;}
+
+
+// tiny screens
+@include mq($from: mobile, $until: mobileMedium) {
+.donate-uk {background-position: 22% 235px;}
+.page-id-2960 .donate-uk {background-position: 22% 162px;}
+.donate-uk__message {padding-left:0; padding-right: 0;}
+.donate-uk__select {padding-bottom: 240px;}
+.donate-uk__currency {left:130px;}
+}
+
+
+
+@include mq($from: tablet) {
+
+.page-id-762 #givingAmountLink {justify-content: flex-start;}
+.page-id-2960 #givingAmountLink {justify-content: flex-start;}
+.donate-uk__modal-trig {text-align: left;}
+.donate-uk__button-container {justify-content: flex-start;}
+
+.donate-uk__currency {
+	text-align: right;
+	margin-top: 0px;
+	margin-bottom: -20px;
+	text-decoration: underline;
+	cursor: pointer;
+	a{color:#333; opacity: 0.3;}
+	display: inline-block;
+	float: right;
+	transform: translate(-13px, 10px);
+}
+
+.donate-uk__errorTxt > #Amount-error {text-align: left;}
+.wizard > .actions > ul li{text-align: left;}
+.donate-uk__spacemob {justify-content: space-between;}
+#field_6_1 {width: 100%; margin:0;}
+#input_6_1 {width:100%; margin:0;}
+.gform_footer {justify-content: flex-start;}
+.donate-uk__forminner {width:100%;}
+.donate-uk__amount__inner {width:100%; margin:0;}
+.donate-uk {background-image: url(https://hopeforjustice.org/wp-content/uploads/2019/06/guardian-web-optimised.jpg);}
+.donate-uk__secondimg {background-image: url(https://hopeforjustice.org/wp-content/uploads/2019/06/guardian-web-optimised-alt.jpg);}
+//.donate-uk__noback {background-image: url(https://hopeforjustice.org/wp-content/uploads/2019/06/guardian-web-optimised.jpg);}
+.donate-uk__wrapper {justify-content: flex-end; align-items: flex-start; padding:50px 20px 50px 20px;}
+.donate-uk__wrapper--padding {padding:20px 20px 50px 20px;}
+.donate-uk__formwrap {width:40%; display:flex; flex-direction: column; align-items: flex-start;}
+.donate-uk__msgwrap {width:60%; display: flex;}
+.donate-uk__select {padding:0;}
+.donate-uk {min-height: 63vh; background-position: 21% 180px;}
+.donate-uk__background--cover {background-size: cover; background-position: 25% 180px;}
+.donate-uk__msgp {padding:0;}
+.donate-uk__message {text-align: left; padding: 0px 40px 0 0; margin: 0 0;}
+
+.donate-uk {display: block;}
+
+}
+
+
+@include mq($from: desktopXLarge) {
+
+.page-id-2960 .donate-uk {background-position: 19% 0px;}
+.donate-uk {
+	background-size: cover; 
+	background-position: 0 0; 
+	min-height: 70vh; 
+	display: flex;
+	align-items: center;
+}
+.donate-uk__wrapper--padding {padding:20px 0;}
+.donate-uk__msgwrap {justify-content: flex-end;}
+.donate-uk__formwrap {width:30%;}
+.donate-uk__msgwrap {width:70%;}
+
+.donate-uk__watch-video {
+		background-color:transparent;
+		position:static;
+		justify-content: flex-start;
+		text-decoration: underline;
+	}
+
+.donate-uk__watch-video:hover {
+		cursor: pointer;
+	}
+.donate-uk__half {width:50%;}
+
+}
+

@@ -1,0 +1,25 @@
+/************************************************
+*  $_SIGNUP.SCSS
+*************************************************/
+/// used by email /signup landing page
+.page.signup {
+	min-height: em(900);
+	.gform_footer {
+		text-align: right;
+		.button--solid {
+			border-color: $blue;
+			background-color: $blue;
+			color: $white;
+			&:hover, &:focus {
+				color: $blue-text;
+			}
+		}
+	}
+}
+.signup-header {
+	margin-bottom: $base-spacing-unit*4;
+	&__title {
+		color: $blue;
+		letter-spacing: em(3, 72);
+	}
+}

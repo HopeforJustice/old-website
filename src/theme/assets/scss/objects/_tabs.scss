@@ -1,0 +1,13 @@
+/************************************************
+*  $_TABS.SCSS
+*************************************************/
+
+// minimal styling for the main tabs
+.tab {
+	display: inline;
+}
+.tab-content__inactive {
+   position: absolute;
+   top: -9999px;
+   left: -9999px;
+}

@@ -1,0 +1,11 @@
+/************************************************
+*  $_ABOLITION-GROUPS.SCSS
+*************************************************/
+.bear-grylls {
+	&:before {
+		@include tint-overlay($black, 0.4);
+		@include mq($from: tablet) {
+			content: none;		
+		}
+	}	
+}

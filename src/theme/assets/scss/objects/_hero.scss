@@ -1,0 +1,50 @@
+/************************************************
+*  $_HERO.SCSS
+*************************************************/
+.hero__background {
+	background-size:cover;	
+	background-position: 50% 0%;
+	background-repeat: no-repeat;
+    position: absolute;
+	top: 0;
+    left: 0;
+    width: 100%;
+    z-index: $z-background;
+}
+
+.hero--tall {
+	min-height: em(420px);
+	&.hero__background {
+		min-height: em(500px);
+	}
+}
+
+
+
+
+.hero__background.no-touch {
+	position:fixed;
+}
+body.admin-bar .hero__background {
+  top: 32px;
+}
+.hero__content {
+	position: relative;
+	z-index: $z-content;
+	color: $white;
+	margin-top: em(28px);
+}
+
+@include mq($from: tablet) {
+	.hero--tall {
+		min-height: em(520px);
+		&.hero__background {
+			min-height: em(600px);
+		}
+	}
+	.hero__content {
+		margin-top: em(109px);
+	}
+}
+
+

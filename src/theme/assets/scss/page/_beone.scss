@@ -1,0 +1,45 @@
+/************************************************
+*  $_BEONE.SCSS
+*************************************************/
+
+// used for the /be-one campaign landing page
+
+.page-id-2051 #content {
+	padding-top: 0;
+}
+
+#post-2051 .parfait__parallax {
+	background-position: 50% 0;
+}
+
+#beone {
+
+	.beone__title {
+		padding-top: em(240,32);		
+		@include font-size(32);
+		font-weight: 700;
+
+	}
+	.beone__caps {
+		@include font-size(57);
+		line-height: 1.157894737;
+		font-family: $open-sans;		
+	}
+
+}
+#be-one-donation {
+	.donation-form {
+		display: none;
+	}
+}
+@include mq($from: tablet) {
+	#be-one-donation {
+		.beone__intro {
+			@include span-columns(16);
+			@include shift(4);
+		}
+		.donation-form__button {
+			clear: left;
+		}	
+	}
+}

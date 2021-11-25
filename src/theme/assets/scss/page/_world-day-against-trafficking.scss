@@ -1,0 +1,234 @@
+/************************************************
+*  $_CAMPAIGN.SCSS
+*************************************************/
+
+.world-day input:focus,
+.world-day select:focus,
+.world-day button:focus {
+    outline: none;
+    box-shadow: none;
+}
+.world-day {
+	background-image: url(https://hopeforjustice.org/wp-content/uploads/2020/07/Screenshot-2020-07-23-at-13.54.04-alt4-optimised-mob.jpg); 
+	min-height: 90vh;
+	background-size: 200%;
+	background-repeat:no-repeat; 
+	background-position: bottom -10px right -25vh;
+}
+.world-day .gfield_label {font-size: 14px;}
+.world-day .gfield_html, .world-day .gfield_description {font-size: 12px;}
+
+.world-day .gform_page_fields input, .world-day .gform_page_fields select {
+	background-color: transparent;
+    padding: 0;
+    border: none;
+    width: 50%;
+    font-size: 12px;
+    border-bottom: 1px solid #C6C6C6;
+    border-radius: 0;
+    padding-right: 10px;
+}
+
+.world-day .gform_page_fields select {
+	background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86.6 75"><defs></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><polygon class="cls-1" points="43.3 0 86.6 0 64.95 37.5 43.3 75 21.65 37.5 0 0 43.3 0"/></g></g></svg>') no-repeat 100% 50%;
+	-moz-appearance: none; 
+	background-size: 1.5%;
+	background-blend-mode: darken;
+	-webkit-appearance: none; 
+	appearance: none;
+	width:70%;
+}
+
+.world-day__logo {
+	max-width: 130px;
+    margin-bottom: 15px;
+}
+
+.world-day__example {
+	font-size: 9px;
+	text-decoration: underline;
+	font-family: 'Roboto Mono', monospace;
+	position:absolute;
+	bottom:100px;
+    left: 25px;
+    &:hover {
+    	cursor: pointer;
+    }
+}
+
+.world-day .StripeElement{
+	padding: 0;
+	border: none;
+	border-radius:0;
+	background-color:transparent;
+	border-bottom: 1px solid #C6C6C6;
+	height: auto;
+    padding-bottom: 6px;
+    margin-bottom: 10px;
+}
+
+.world-day textarea {
+	font-family: 'Roboto Mono', monospace;
+	border: none; 
+	height: 250px;  
+	width: 200px;
+	margin: 0 auto; 
+	border-radius: 0; 
+	background-attachment: local; 
+	background-image: linear-gradient(to right, white 15px, transparent 10px),linear-gradient(to left, white 15px, transparent 2px),linear-gradient(to bottom, white 16px, transparent 2px),linear-gradient(to top, white 16px, transparent 2px),repeating-linear-gradient(white, white 14px, #ccc 15px, #ccc 15px, white 15px); 
+	line-height: 31px; 
+	padding: 14px;
+    padding-top: 18px;
+    line-height: 15px;
+	-webkit-box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.11);
+	-moz-box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.11);
+	box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.11); 
+	font-size: 9px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.world-day .world-day__full-width input, .world-day .world-day__full-width select {
+	width:100%;
+}
+
+.world-day .gform_ajax_spinner {
+ //display: none;
+}
+
+.world-day .charleft {display:none;}
+
+.world-day .validation_message {color: #d21220;}
+.world-day .validation_error {
+	width: 50%;
+    font-size: 12px;	
+}
+
+.world-day .button {
+	font-size: 12px;
+	margin-bottom: 20px;
+}
+
+.world-day__title {
+	font-family: 'Playfair Display', serif;
+}
+
+.world-day__sub-title {
+	color: $hfj-red;
+	margin-bottom: 20px;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.world-day__sub-title-2 {
+	font-size: 12px;
+	margin-bottom: 20px;
+}
+
+.world-day__details {
+	margin-bottom: 20px;
+	font-size: 12px;
+}
+
+.world-day__content {
+	padding: 10px; 
+	padding-top: 20px;
+	position: relative;
+}
+
+@include mq($from: mobileMedium) {
+
+.world-day textarea {
+	height: 276px;
+    width: 70%;
+    font-size: 10px;
+}
+
+.world-day__example {bottom:106px;}
+
+//.world-day__title {max-width: 300px;}
+
+}
+@include mq($from: tablet) {
+
+.world-day {
+	min-height: 80vh;
+}
+
+.world-day__title {
+	font-size: 43px;
+}
+
+.world-day textarea {
+	width: 50%;
+	background-image: linear-gradient(to right, white 20px, transparent 10px),linear-gradient(to left, white 20px, transparent 2px),linear-gradient(to bottom, white 30px, transparent 2px),linear-gradient(to top, white 16px, transparent 2px),repeating-linear-gradient(white, white 18px, #ccc 19px, #ccc 19px, white 0px);
+    line-height: 31px;
+    padding: 20px;
+    padding-top: 23px;
+    line-height: 19px;
+    font-size: 11px;
+    height:429px;
+}
+
+.world-day .gform_confirmation_message {max-width:50%;}
+
+.world-day__content {padding:120px 100px 75px 75px;}
+
+
+
+.world-day .gform_page_fields select {width:50%;}
+
+.world-day__example {
+	bottom:200px;
+    left: 95px;
+}
+
+
+}
+
+@include mq($from: desktop) {
+
+.world-day {
+	background-image: url(https://hopeforjustice.org/wp-content/uploads/2020/07/Screenshot-2020-07-23-at-13.54.04-alt4-optimised-1.jpg); 
+	background-size:100%;
+	background-position: top right;
+	min-height: 100vh;
+}
+
+.world-day__logo {
+	position: fixed;
+    width: 289px;
+    bottom: 50px;
+    /* right: 50px; */
+    left: 50px;
+}
+
+.world-day__content {padding:80px 100px 75px 0px;}
+
+.world-day__title {max-width: 69%;}
+
+.world-day__sub-title, .world-day__sub-title-2{
+	font-size: 14px;
+	max-width: 69%;
+}
+
+.world-day__example {
+	bottom:187px;
+    left: 20px;
+    font-size: 11px;
+}
+
+.world-day .gform_page_footer {width:50%;}
+
+.world-day .gform_page_fields input, .world-day .gform_page_fields select {font-size: 16px;}
+
+.world-day .button {font-size: 16px;}
+.world-day .gfield_label {font-size: 16px; max-width: 50%;}
+.world-day .StripeElement {font-size: 16px; max-width: 50%;}
+.world-day .gfield_html {max-width: 50%;}
+#gform_submit_button_89 {height:36px;}
+.world-day .gfield_description {font-size: 14px; max-width: 50%;}
+}
+
+
+

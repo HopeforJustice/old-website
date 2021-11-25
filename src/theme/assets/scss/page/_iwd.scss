@@ -1,0 +1,269 @@
+/************************************************
+*  $_IWD.SCSS
+*************************************************/
+
+.iwd {
+	background-color: white;
+}
+
+.iwd__header {
+	background-color:#EAC2AD;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	.iwd__header-text {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	}
+}
+
+.iwd__logos {
+	display:flex;
+	margin-top: 20px;
+	.iwd__empowerall {
+		width:100px;
+		margin-right: 15px;
+	}
+	.iwd__bird {
+		width:22px;
+	}
+}
+
+.iwd__title {
+	h1{
+		font-family: 'Playfair Display', serif;
+		color: white;
+		text-align: center;
+		font-size: 29px;
+		margin-top: 10px;
+    	margin-left: -17px;
+	}
+}
+
+.iwd__line {
+	width:80px;
+	height:3px;
+	background-color:#DE9E87;
+}
+
+.iwd__stat {
+	background-color:#DE9E87;
+	color: white;
+	font-weight: bold;
+	padding: 11px 40px; 
+	text-align: center;
+	line-height: 1.2;
+	margin-top: -5px;
+	width:100%;
+	span {
+		font-size: 22px;
+	}
+	.iwd__stat-text {
+		margin: 0;
+		font-size: 12px;
+	}
+}
+
+.iwd__giving {
+	padding:20px;
+}
+
+.iwd__giving-content {
+	color: black;
+	margin-top: 20px;
+	h2 {
+		text-transform: uppercase;
+		position: relative;
+		z-index: 1;
+		display: inline-block;
+		color: #04003C;
+		&:before {
+			content:"";
+			position:absolute;
+			display: block;
+			width:100%;
+			height:5px;
+			background-color:#DE9E87;
+			z-index: -1;
+			bottom:-1px;
+		}
+	}
+	span {
+		color: #DE9E87;
+	}
+}
+
+.iwd__photo {
+	width: 100%;
+    padding-top:100%;
+    margin-top: 10px;
+    background-size: cover;
+}
+
+.iwd__amounts {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+	margin-top: 50px;
+	.iwd__amount {
+		width: 60px;
+		height: 60px;
+		border-radius: 100%;
+		background-color:#EAC2AD;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-weight: bold;
+		color: #04003C;
+		font-size:22px;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+.iwd__custom-amount {
+	display: flex;
+	.iwd__input {
+		width:100%;
+		position: relative;
+	}
+	input {
+		border:none; 
+		margin:0; 
+		height:55px;
+		border-radius:10px 0 0 10px;
+		border: 3px solid #DE9E87;
+		border-right:none;
+		padding-left: 40px;
+	}
+	.iwd__amount-btn {
+		background-color: $hfj-red;
+		color: white;
+		padding: 10px;
+		display: flex;
+		justify-content: center;
+		align-items:center;
+		position:relative;
+		border: 3px solid $hfj-red;
+		border-radius: 0 10px 10px 0;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+.iwd__input-uk:before {
+	content: "£";
+	position: absolute;
+	top: 14px;
+	left: 16px;
+	font-size: 19px;
+	font-weight: bold;	
+}
+
+.iwd__input-us:before {
+	content: "$";
+}
+
+.iwd__input-no:before {
+	content: "Kr";
+}
+
+.iwd__giving-widget-footer {
+	margin-top: 20px;
+}
+
+.iwd__video {
+	background-color:#EAC2AD;
+	padding: 40px 0;
+}
+
+@include mq($from: mobileMedium) {
+
+
+.iwd__stat {font-size: 16px;}
+.iwd__title h1{ font-size: 38px;}
+
+.iwd__logos {
+	margin-top: 40px;
+	margin-bottom: 10px;
+	.iwd__empowerall {width:130px;}
+	.iwd__bird {width:32px;}
+}
+
+.iwd__amounts {width: 70%; max-width: 250px;}
+
+}
+
+@include mq($from: tablet) {
+
+.iwd__graphic {
+	width:50%;
+	order:1;
+}
+
+.iwd__header-inner {
+	display: flex;
+	align-items:flex-end;
+}
+
+.iwd__header-text {
+	width:50%;
+	order:2;
+	padding: 30px 0 50px 0;
+	h1{font-size: 46px;}
+}
+
+.iwd__stat {
+	text-transform: uppercase;
+	line-height: 1.5;
+	padding:20px;
+	span {
+		font-size: 36px;
+	}
+	.iwd__stat-text {
+		font-size: 23px;
+	}
+}
+
+.iwd__giving {
+	padding: 24px 14px;
+	display: flex;
+	flex-direction: row-reverse;
+	.iwd__giving-content {
+		margin-top: 0;
+		margin-right:50px;
+		flex:1;
+	}
+}
+
+.iwd__photo {
+	width: 100%;
+    height:550px;
+    padding-top: 0;
+    margin-top: 0px;
+    flex: 1;
+}
+
+}
+
+@include mq($from: desktop) {
+
+.iwd__giving {
+	padding: 50px 0;
+}
+
+.iwd__giving-content p {
+	font-size: 18px;
+}
+
+.iwd__giving-widget-footer p {
+	font-size: 14px;
+	max-width: 80%;
+}
+}

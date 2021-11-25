@@ -1,0 +1,15 @@
+/************************************************
+*  $_CAMBODIA.SCSS
+*************************************************/
+#sanya:before, #shine:before {
+	@include tint-overlay($black, 0.4);
+}
+#dream-home:before {
+	@include tint-overlay($white, 0.8);
+}
+
+@include mq($from: tablet) {
+	#sanya:before, #dream-home:before, #shine:before {
+		content: none;
+	}
+}

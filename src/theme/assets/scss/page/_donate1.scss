@@ -1,0 +1,239 @@
+/************************************************
+*  $_DONATE.SCSS
+*************************************************/
+
+// donate1 is used by the multi-step donation form - NO donate at the moment
+
+.donate1 {
+    @include span-columns(22);
+    @include shift(1);
+    @include transition-delay(1s);
+    @include transition(opacity .3s);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+    border-radius: $base-border-radius;
+    background: #F5F5F7;
+    color: $base-font-color;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    margin-bottom: $base-spacing-unit;
+    box-sizing:border-box;
+
+    // header elements
+    &__header {
+        background-color: #F0F0F2;
+        padding: em(21);
+        text-align: center;
+        border-bottom: 1px solid #D3D3D4;
+        box-shadow: 0 1px 0 $white;
+    }
+    &__title {
+        @include font-size(22);
+        margin-bottom: 0;
+    }
+    &__steps {
+        margin: em(8) 0;
+    }
+    &__breadcrumbs {
+        display: none;
+    }
+    &__step-no {
+        @include size(em(21));
+        border-radius: 50%;
+        background-color: $white;
+        color: $medium-gray;
+        display: block;
+        line-height: 1.5;
+        text-align: center;
+        .donate1__step__active & {
+            background-color: $blue;
+            color: $white;
+            pointer-events: none;
+            @include user-select(none);
+            &:hover {
+                cursor: auto;
+            }
+        }
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    &__step-lbl {
+        display: none;
+    }
+    &__secure {
+        color: $mediumish-gray;
+        float: right;
+        &:before {
+            color: $medium-gray;
+            margin-right: 5px;
+        }
+    }
+
+
+    // form fields
+    &__form {
+        @include clearfix();
+    }
+    &__legend {
+        @include font-size(20);
+        float: left;
+        width: 100%;
+        text-align:center;
+        line-height: 1.05;
+        margin: 0 0 em(11) 0;
+        color: $mediumish-gray;
+    }
+
+    &__fields {
+        box-sizing:border-box;
+        border: 0 none;
+        padding: em(21) em(21) 0;
+        margin-bottom: 0;
+    }
+    &__row {
+        margin-bottom: em(21);
+    }
+
+    &__amount-pre {
+        border-radius: $base-border-radius;
+        background-color: $white;
+        border-width: 2px;
+        border-style: solid;
+        border-color: $orange;
+        display: block;
+        font-weight: 700;
+        @include font-size(16);
+        line-height: 2.25;
+        margin-bottom: $half-spacing-unit;
+        white-space: nowrap;
+        text-align: center;
+        padding: 0 em(3);
+        color: $orange;
+        -webkit-font-smoothing: antialiased;
+        &:hover {
+            color: darken($orange,10);
+        }
+        &__active {
+            background-color:$orange;
+            color: $white;
+        }
+    }
+    &__amount-err, &__payment-err {
+        display: none;
+    }
+    &__help {
+        font-style: italic;
+        color: $medium-gray;
+        margin-bottom: $half-spacing-unit;
+    }
+    input[type="text"], input[type="email"], input[type="tel"] {
+        margin-bottom: 0;
+    }
+    // advance buttons are hidden by default - as the form is only sequential on desktop
+    &__btn.button {
+        display: none;
+    }
+    &__submit.button {
+        margin-top: $base-spacing-unit;
+        &:disabled, [disabled] {
+            cursor: wait;
+            color: $red-text;
+            .donate1__spinner{
+              @include animation-duration(.75s);
+              @include animation-iteration-count(infinite);
+              @include animation-name(rotate-forever);
+              @include animation-timing-function(linear);
+              display: inline-block;
+            }
+            .donate1__submit-text {
+                display: none;
+            }
+        }
+
+    }
+    .cssanimations &__spinner {
+      @include size(em(20));
+      border: 4px solid $white;
+      border-right-color: transparent;
+      border-radius: 50%;
+      position: relative;
+      top: 5px;
+      display:none;
+    }    
+
+    // footer elements
+    &__footer {
+        padding: em(21);
+        clear: left;
+        @include clearfix();
+    }
+    &__hidden {
+        display: none;
+    }
+
+    // state
+    &--sequential {
+        .donate1__fields {
+            display: none;
+            float: left;
+            height: 0;
+            margin: 0;
+            zoom: 1;
+        }
+    }
+    &--ready {
+        visibility: visible;
+        opacity:1;
+    }
+
+}
+
+@include mq($from: mobileLandscape) {
+    .donate1 {
+        @include span-columns(18);
+        @include shift(3);
+    }
+}
+@include mq($from: tablet) {
+    .csstransforms3d .donate1.donate1--sequential {
+        width: em(430);
+        margin: 0 auto $base-spacing-unit;
+        float: none;
+        .donate1__form {
+            float: left;
+            @include transition-property(transform);
+            @include transition-duration(.5s);
+            @include transition-timing-function(ease-in-out);
+        }
+        .donate1__breadcrumbs {
+            display: block;
+            float: left;
+        }
+        .donate1__breadcrumb {
+            display: inline-block;
+            & + & {
+                margin-left: em(5);
+            }
+        }        
+        .donate1__fields {
+            width: em(430);
+            display: block;
+            &__active {
+                display: block;
+                height: auto;
+            }
+        }
+        .donate1__btn{
+            display: block;
+            margin-top: $base-spacing-unit;
+        }
+
+        &.donate1--step2 .donate1__form {
+            @include transform(translate(em(-430)));
+        }
+        &.donate1--step3 .donate1__form {
+            @include transform(translate(em(-860)));
+        }
+    }
+}

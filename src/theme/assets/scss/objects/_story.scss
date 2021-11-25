@@ -1,0 +1,93 @@
+/************************************************
+*  $_STORY.SCSS
+*************************************************/
+// Stories are the zooming links to news stories used on /news
+
+.story {
+	background: $light-gray;
+	display: block;
+	margin-bottom: $base-spacing-unit;
+	position: relative;
+	z-index:$z-background;
+	//height: em(262px);
+	overflow: hidden;
+	text-align: center;
+	&:hover {
+		.story__image {
+			@include transform(scale(1));
+			opacity: 1;
+		}
+	}
+	&.story--large {
+		margin-bottom: 0;
+	}
+	article {
+		height: 100%;
+	}
+}
+.story__image, .story__background {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	min-width: 100%;
+	@include transition-property(opacity, transform);
+	@include transition-duration(.3s);
+	@include transition-timing-function(ease-in);
+	@include transform(scale(1.05));
+}
+.story__text {
+	position: absolute;
+	width: 100%;
+	-webkit-font-smoothing: antialiased;
+	margin: 0;
+	bottom: 0;
+	padding: $base-spacing-unit;
+	text-align: left;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		@include linear-gradient(transparent, transparentize($black,.6) 70%);
+		z-index: $z-background;
+	}
+}
+.story__title, .story__date {
+	color: $white;
+	z-index: $z-content;
+}
+.story__title {
+	@include font-size(18);
+	line-height: 1;
+	margin-bottom:0;
+	position: relative;
+	z-index: $z-content;
+}
+.story__date {
+	display:block;
+	position: relative;
+	font-style: italic;
+	@include font-size(11);
+}
+
+@include mq($from: tablet) {
+	.col .story {
+		width: auto;
+		float: none;
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.story__title {
+		@include span-columns(12 of 16);
+	}
+	.story.story--large {
+		.story__title {
+			@include font-size(24);
+		}
+		.story__date {
+			@include font-size(14);
+		}
+	}
+}

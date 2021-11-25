@@ -1,0 +1,154 @@
+/********************************
+*  _PARFAIT.SCSS
+*********************************/
+
+// Backgrounds 
+////////////////////////////////////////////////
+
+// Top section parallax div
+
+.parfait__parallax {
+    left: 0;
+    width: 100%;
+    z-index: $z-background;
+	position: absolute;    
+}
+
+.no-touch .parfait__parallax {
+    position: fixed;
+}
+
+// background repeats 
+
+.parfait__row, .parfait__parallax {
+	&.stretch {
+		background-size: cover;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+	}
+	&.tile {
+		background-repeat: repeat;
+		background-position: 0 0;
+	}
+}
+
+
+
+// Headers and footers
+////////////////////////////////////////////////
+
+.parfait-header, .parfait-footer {
+	text-align: center;
+}
+.parfait-header__title {
+	margin-bottom: 0;
+}
+
+.parfait-header__sub-title {
+	margin-top: em(6px,18);
+}
+
+
+// Global style for each row 
+////////////////////////////////////////////////
+
+.parfait__row {
+	padding: $base-spacing-unit*2 0;
+	border-bottom: 1px solid $light-gray;
+}
+
+// Text colour schemes
+////////////////////////////////////////////////
+.parfait__row {
+	&.light {
+		color: $base-font-color;
+
+	}
+	&.dark {
+		color: $white;
+		-webkit-font-smoothing: antialiased;
+		// p a {
+		// 	color: $white;
+		// }
+		.share a {
+			color: $white;
+		}
+	}
+}
+
+// Section formats
+////////////////////////////////////////////////
+.parfait__row {
+
+	// image header
+	&.image-header {
+		text-align: center;
+	}
+
+	// &.parfait__row__top.tile, &.parfait__row__top.stretch {
+	// 	height: em(474px);
+	// }
+
+	//three & four column
+	&.three-col, &.four-col{
+		text-align: center;
+	}
+
+	//quotation 
+	&.quotation {
+		.quote {
+			font-size:24px;
+			font-size:rem(24);
+			color: $blue;
+			line-height: 1.16666667;
+			p {
+				margin-bottom:0;
+			}
+			footer {
+				font-size: 16px;
+				font-size: rem(16px);
+				line-height: $base-line-height;
+				color: $base-font-color;
+				font-style: normal;
+				font-weight: 500;
+				margin-bottom: $base-spacing-unit;
+			}
+		}
+		.share {
+			float: left;
+			margin-right: $base-spacing-unit;
+		}
+		.actions {
+			float: left;
+		}
+	}
+}
+
+// Top element peculiarities
+////////////////////////////////////////////////
+
+.parfait__row__top.stretch, .parfait__row__top.tile {
+	background-color: transparent;		
+}
+.parfait__row__top.parfait__row__has-background .parfait-header__title {
+	margin-top: em(110px, 72);
+}
+@include mq($from: mobileLandscape, $until: tablet) {
+	.parfait-header__sub-title {
+		margin-top: 0;
+	}
+}
+@include mq ($from: tablet) {
+	.parfait__parallax {
+		min-height: em(474px);
+	}
+	.parfait-header__sub-title {
+		margin-top: 0;
+	}	
+	.parfait__row {
+		&.parfait__row__top.tile, &.parfait__row__top.stretch {
+			min-height: em(474px);
+		}
+	}
+}
+

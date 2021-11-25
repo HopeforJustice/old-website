@@ -1,0 +1,28 @@
+/********************************
+*  _POST.SCSS
+*********************************/
+// Post is used by individual news stories
+.post {
+	padding: $base-spacing-unit*2 0;
+}
+.post__header {
+	text-align:center;
+}
+.post__categories {
+	display: inline-block;
+	&:after {
+		content: ' | ';
+		color: $light-gray;
+		margin: 0 em(10);
+	}
+}
+.post__meta {
+	@include font-size(14);
+	margin-bottom: em(5,14);
+}
+.post__author, .post__date {
+	font-style:italic;
+}
+.post__author {
+	font-weight: 700;
+}

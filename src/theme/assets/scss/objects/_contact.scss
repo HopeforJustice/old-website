@@ -1,0 +1,20 @@
+/************************************************
+*  $_CONTACT.SCSS
+*************************************************/
+// This is only in use on /news at the moment - but we might get to use it elsewhere...
+.contact {
+	display: table;
+}
+.contact-row {
+	display: table-row;
+}
+.contact-label, .news__contact-detail {
+	display: table-cell;
+}
+.contact-label {
+	width: em(60);
+	font-weight: 700;
+}
+.contact-detail a {
+	display: block;
+}

@@ -1,0 +1,50 @@
+/************************************************
+*  $_FUNDRAISING-US.SCSS
+*************************************************/
+#fantastic-fundraisers {
+    .fundraiser {
+        background-color: #fff;
+        padding: em(21);
+        margin-bottom: em(21);
+        display: block;
+        color: $base-font-color;
+        overflow: hidden;
+    }
+    .fundraiser:hover {
+        color: $base-font-color;
+        box-shadow: 0 1px 10px rgba(0,0,0,.15);
+    }
+    .fundraiser__name {
+        color: $blue;
+        margin-top: em(11);
+        margin-bottom: 0;
+    }
+    .fundraiser__event {
+        font-weight: 500;
+        min-height: em(63,18);
+    }
+    .fundraiser__image__placeholder + .fundraiser__event {
+        margin-top: em(33,18);
+    }        
+    .fundraiser__image {
+        width: 100%;
+    }
+    .thermometer {
+        background-color:$light-gray;
+        height: em(21);
+    }
+    .fundraiser__event + .thermometer {
+        margin-top: em(42);
+    }
+    .thermometer__progress  {
+        background-color: $dark-gray;
+        height: 100%;
+        position:relative;
+    }
+    .thermometer__raised {
+        float: left;
+    }
+    .thermometer__goal {
+        float: right;
+    }
+}

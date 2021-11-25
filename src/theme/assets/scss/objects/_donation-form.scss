@@ -1,0 +1,75 @@
+/************************************************
+*  $_DONATION-FORM.SCSS
+*************************************************/
+// methods for creating a donation form.
+.donation-form--simple {
+	display: none;
+}
+
+// similar to the christmas one - supports one-time/monthly, or a single option, UK only
+.donation-form {
+	&--basic {
+	    padding: $base-spacing-unit 0;
+	    .donation-form__tab {
+	        display: block;
+	    }
+	    .donation-form__content-wrapper {
+	        text-align: center;
+	        margin-bottom: $base-spacing-unit;
+	    }
+	    .donation-form__content {
+	        display: none;
+	        &--active {
+	            display:inline-block;
+	        }           
+	    }    
+	    .donation-form__tab-set {
+	        display: block;
+	        padding: 0 $half-spacing-unit $half-spacing-unit $half-spacing-unit;
+	    }
+
+	    //dressing up the gravity forms bit
+
+	    .instruction {
+	        display: none;
+	    }
+
+	    .gfield {
+	        width: 100%;
+	    }
+	    .gform_body {
+	    	@include clearfix();
+	    }
+	    .gform_footer {
+	    	margin-top: $half-spacing-unit;
+	        .button--gray {
+	            @extend .button--blue;
+	            @extend .button.button--large;
+	            margin-top: 0;
+	        }
+	    } 
+    }  
+}
+
+@include mq($from: mobileLandscape) { 
+    .donation-form {
+    	&--basic {
+	        .donation-form__tab {
+	            display:inline-block;
+	        }		    
+	    }
+    }
+}
+@include mq($from: tablet) { 
+    .donation-form {
+    	&--basic {
+    	    .gform_body {
+		        @include span-columns(6 of 10);
+		    }
+		    .gform_footer {
+		    	margin-top: 0;
+		        @include span-columns(4 of 10);
+		    } 		    
+	    }
+    }
+}

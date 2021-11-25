@@ -1,0 +1,52 @@
+/********************************
+*  _PREHEADER.SCSS
+*********************************/
+
+.preheader {
+  width: 100%;
+  background-color: #d21220;
+  color:white;
+  padding:7px 0;
+  position: relative;
+  height: 125px;
+  .preheader__content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: left;
+    width:90%;
+    p {
+      margin:5px 0;
+    }
+    .preheader__close {
+      color: #ffffff;
+      position: absolute;
+      top:0;
+      right:0;
+      padding:10px;
+    }
+  }
+
+}
+
+@include mq($from: tablet) {
+  .preheader {
+      height: 60px;
+  .preheader__content {
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    text-align: left;
+    width:100%;
+    p {
+      margin-right: 20px;
+    }
+    .preheader__close {
+      position: relative;
+      padding-left:20px;
+    }
+  }
+
+}
+}

@@ -1,0 +1,27 @@
+/************************************************
+*  $_nyhetsoppdatering.SCSS
+*************************************************/
+/// used by email /signup landing page for norwegians
+.single.nyhetsoppdatering {
+	min-height: em(900);
+	.gform_footer {
+		text-align: right;
+		.button--solid {
+			border-color: $blue;
+			background-color: $blue;
+			color: $white;
+			&:hover, &:focus {
+				color: $blue-text;
+			}
+		}
+	}
+	.single-header {
+		margin-bottom: $base-spacing-unit*4;
+		&__title {
+			color: $blue;
+			letter-spacing: 1px;
+			text-transform: uppercase;		
+		}
+	}
+
+}

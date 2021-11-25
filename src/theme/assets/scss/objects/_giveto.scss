@@ -1,0 +1,46 @@
+/************************************************
+*  $_GIVETO.SCSS
+*************************************************/
+
+
+.giveto {
+	background-color: white;
+	text-align: center;
+	padding: 50px 20px 50px 20px;
+}
+
+.giveto_title {
+	max-width:400px;
+	margin-bottom: 20px;
+}
+
+.giveto_text {
+	max-width: 600px;
+	margin:0 auto;
+	margin-bottom: 50px;
+}
+
+.giveto_person {
+	margin: 0 auto;
+	margin-bottom: 40px;
+}
+
+.giveto_image {
+
+background-color: black;
+width:200px;
+height:200px;
+border-radius:100%;
+margin-bottom: 20px;
+background-size: cover;
+background-position: 50% 50%;
+
+}
+
+.giveto_people {
+	display: flex;
+	flex-wrap: wrap;
+	margin:  0 auto;
+	max-width: 600px;
+	justify-content: space-between;
+}

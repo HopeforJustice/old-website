@@ -1,0 +1,85 @@
+// SASSY MATH
+
+@charset "UTF-8";
+
+//////////////////////////////
+// Variables
+//////////////////////////////
+$pi: 3.1415926535897932384626433832795028841971693993751;
+$π: $pi;
+$e: 2.71828182845904523536028747135266249775724709369995;
+
+$iter: 50;
+
+//////////////////////////////
+// Random Number
+//   Working from http://xkcd.com/221/
+//    Chosen by fair dice roll.
+//    Guarenteed to be random.
+//////////////////////////////
+@function rand() {
+  @return 4;
+}
+
+//////////////////////////////
+// Exponent
+//////////////////////////////
+@function exponent($base, $exponent) {
+  // reset value
+  $value: $base;
+  // positive intergers get multiplied
+  @if $exponent > 1 {
+    @for $i from 2 through $exponent {
+      $value: $value * $base; } }
+  // negitive intergers get divided. A number divided by itself is 1
+  @if $exponent < 1 {
+    @for $i from 0 through -$exponent {
+      $value: $value / $base; } }
+  // return the last value written
+  @return $value; 
+}
+
+@function pow($base, $exponent) {
+  @return exponent($base, $exponent);
+}
+
+//////////////////////////////
+// Root Functions
+//////////////////////////////
+// Basic General-Purpose Root Function
+@function n-root($number, $n) {
+  @if $number < 1 {
+    @return ERROR;
+    @warn ROOT ERROR; 
+  }
+  // If a whole number, generate it quickly
+  @for $i from 1 through $number {
+    @if exponent($i, $n) == $number {
+      @return $i; 
+    } 
+  }
+  // Else, run through other options
+  @for $i from 1 through $number * 1000 / 2 {
+    @if round(exponent($i / 1000, $n) * 100) == round($number * 100) {
+      @return $i / 1000; 
+    } 
+  } 
+}
+
+@function root($number, $n) {
+  @return n-root($number, $n);
+}
+
+// Square Roots
+@function √($number) {
+  @return sqrt($number); 
+}
+
+@function sqrt($number) {
+  $guess: rand();
+  $root: $guess;
+  @for $i from 1 through $iter {
+    $root: $root - (pow($root, 2) - $number) / (2 * $root);
+  }
+  @return $root;
+}

@@ -1,0 +1,69 @@
+/************************************************
+*  $_PAGINATION.SCSS
+*************************************************/
+.pagination {
+  display: inline-block;
+  padding-left: 0;
+  margin: $base-spacing-unit 0;
+  border-radius: $base-border-radius;
+
+  &__item {
+    display: inline; // Remove list-style and block-level defaults
+    &:first-child {
+      .pagination__link,
+      .pagination__unlink {
+        margin-left: 0;
+        border-top-left-radius: $base-border-radius;
+        border-bottom-left-radius: $base-border-radius;
+      }
+    }
+    &:last-child {
+      .pagination__link,
+      .pagination__unlink {
+        border-top-right-radius: $base-border-radius;
+        border-bottom-right-radius: $base-border-radius;
+        }
+    }
+    &__active {
+      .pagination__unlink {
+        background-color: $blue;
+        color: $white;
+      }
+    }
+  }
+  &__link,
+  &__unlink {
+    position: relative;
+    float: left; // Collapse white-space
+    padding: $half-spacing-unit $half-spacing-unit;
+    line-height: $base-line-height;
+    text-decoration: none;
+    color: $base-font-color;
+    background-color: $white;
+    border: 1px solid $lighter-gray;
+    margin-left: -1px;
+  }
+  &__link {
+    &:hover,
+    &:focus {
+      z-index: 3;
+      color: $hover-link-color;
+      background-color: $lighter-gray;
+      //border-color: $light-gray;
+    }  
+  }
+
+
+  // > .active > a,
+  // > .active > span {
+  //   &,
+  //   &:hover,
+  //   &:focus {
+  //     z-index: 2;
+  //     color: $pagination-active-color;
+  //     background-color: $pagination-active-bg;
+  //     border-color: $pagination-active-border;
+  //     cursor: default;
+  //   }
+  // }
+}

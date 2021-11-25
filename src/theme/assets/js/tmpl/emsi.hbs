@@ -1,0 +1,27 @@
+{{#results}}
+    {{#is chamber "senate"}}
+    <div class="senator">
+        <h3 class="senator__title beta">{{title}} {{first_name}} {{last_name}}</h3>
+        <p class="senator__party">
+        {{#is party 'R'}}
+            Republican
+        {{/is}}
+        {{#is party 'D'}}
+            Democrat
+        {{/is}}
+        </p>
+        {{#if twitter_id}}
+        <a href="https://twitter.com/intent/tweet?text=We%20must%20unite%20to%20end%20human%20trafficking%20and%20modern-day%20slavery.%20%40{{twitter_id}}%20Please%20vote%20yes%20for%20the&hashtags=EndSlaveryAct&via=HopeforJustice&related=HopeforJustice" target="_blank" class="gi-twitter button button--solid button--large button--blue senator__link">Tweet this senator</a>
+        {{/if}}
+        {{#if contact_form}}
+        <a href="{{contact_form}}" class="button button--solid button--large button--red senator__contact" target="_blank">Contact this senator</a>
+        {{/if}}
+    </div>
+    {{/is}}
+
+{{else}}
+    <div class="senator__no-match text--large-print">
+        <p>Sorry - no senators matching that zip code. Please try again. If you're still not able to find you senator using this tool a complete list of senators is available <a href="http://www.senate.gov/general/contact_information/senators_cfm.cfm target="_blank">here</a>. Below is a sample email you may wish to use.</p>
+    </div>
+{{/results}}
+

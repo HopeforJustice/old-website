@@ -1,0 +1,64 @@
+/************************************************
+*  $_FOLLOW.SCSS
+*************************************************/
+.follow__list{
+	text-align: center;
+	margin: em(20) 0 em(7);
+}
+.follow__item {
+	display: inline-block;
+	margin: em(7) em(20) em(8) 0;
+}
+
+.follow__link {
+	background: $blue;
+	border-radius: 50%;
+	color: $white;
+	display: inline-block;
+	line-height: 1.933333333;
+	@include size(em(58,30) em(58,30));
+	@include font-size(30);
+
+}
+.follow__twitter {
+	background-color: $twitter;
+	&:hover {
+		background-color: lighten($twitter, 3);
+		color: darken($twitter, 20);
+	}
+}
+.follow__facebook {
+	background-color: $facebook;
+	&:hover {
+		background-color: lighten($facebook, 3);
+		color: darken($facebook, 20);
+	}
+}
+.follow__linkedin {
+	background-color: $linkedin;
+	&:hover {
+		background-color: lighten($linkedin, 3);
+		color: darken($linkedin, 20);
+	}	
+}
+.follow__vine {
+	background-color: $vine;
+	&:hover {
+		background-color: lighten($vine, 3);
+		color: darken($vine, 20);
+	}	
+}
+.follow__youtube {
+	background-color: $youtube;
+	&:hover {
+		background-color: lighten($youtube, 3);
+		color: darken($youtube, 20);
+	}	
+}
+.follow__instagram {
+	background-color: $instagram;
+	&:hover {
+		background-color: lighten($instagram, 3);
+		color: darken($instagram, 20);
+	}	
+}

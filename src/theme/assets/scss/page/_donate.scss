@@ -1,0 +1,85 @@
+/************************************************
+*  $_DONATE.SCSS
+*************************************************/
+
+//donate is used for Stripe checkout based donation forms (just US at the moment) and some of the form styling for the UK
+.donate-header {
+	padding: $base-spacing-unit 0;
+	text-align: center;
+}
+.donate-header__title {
+	color: $orange;
+}
+.donate-options {
+	min-height: em(760px);
+	.donate-alt__link {
+		color: $white;
+		font-style: italic;
+	}
+}
+.donate__intro {
+	margin-bottom: $base-spacing-unit;
+	span {
+		@include font-size(23);
+		line-height: 1.434782609;
+		font-weight: 700;
+		display: block;
+	}
+}
+.donate-tabs {
+	margin: 0 em(4px);
+	.tab__link {
+		@extend .button--hollow;
+		margin: em(8px) 0;
+		display: block;
+		&.tab__active {
+			@extend .button--solid;
+		}
+	}
+}
+.donate__form {
+	margin-bottom: $base-spacing-unit;
+	overflow: hidden;
+	.instruction {
+		display: none;
+	}
+	.gform_body {
+		@include span-columns(6 of 10);
+	}
+	.gfield {
+		width: 100%;
+	}
+	.gform_footer {
+		@include span-columns(4 of 10);
+		.button--gray {
+			@extend .button--orange;
+			@extend .button.button--large;
+			margin-top: 0;
+		}
+	}
+	.donation-form {
+		@include span-columns(6 of 10);
+	}
+	.donation-form__button {
+		@include span-columns(4 of 10);
+		@include omega();
+	}
+}
+
+// mobile landscape up
+@include mq($from: mobileLandscape) {
+	.donate__intro span {
+		@include font-size(27);
+		line-height: 1.62962963;
+		display: inline;
+	}
+	.donate-tabs {
+		display: inline;
+		position: relative;
+		top: -3px;
+		.tab__link {
+			display: inline-block;
+			margin: 0;
+		}
+	}
+}

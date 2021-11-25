@@ -1,0 +1,181 @@
+/*******************************************************************************
+*  	$_SLANTED
+********************************************************************************/
+
+//tweaky styles
+.slanted {background-color: white;}
+.slanted__logo{width: 120px;margin-bottom: 5px;margin-top: -30px; margin-left:3px;}
+.slanted__place{width:133px;margin-bottom:30px;}
+.slanted__ride {width:212px;}
+.slanted__conquer {width:262px; margin-bottom:25px;}
+.slanted__date {width:168px; margin-bottom:5px;}
+.slanted__biker {margin-top: -100px;margin-left: -100px;}
+.slanted__multiple {width:226px; margin-bottom: 50px; margin-top: 50px;}
+.slanted__everest {width:200px; margin-bottom:15px;}
+.slanted__line {height:1px;background-color:#0F2535;width: 100%; margin: 20px 0;}
+.slanted__prices {width:160px; margin-bottom: 20px;}
+.slanted__program {width:90px;}
+.slanted__partnersimg {width:104px;}
+.slanted__center {display: flex; justify-content: center;}
+
+
+.slanted__header {
+	display: flex;
+	width: 100%;
+	background-color:#F8F7F8;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	height:400px;
+}
+
+
+
+.slanted__inner {
+	display: flex;
+	flex-direction: column;
+	align-items:flex-start;
+}
+
+.slanted__middle {align-items: center;}
+
+.slanted__split{width:100%;}
+
+.slanted__play {
+	transform: skewY(6deg);
+}
+
+.slanted__img {
+	position: relative;
+	overflow:hidden;
+    width: 100%;
+    height: 150px;
+    margin-top: -50px;
+    transform: skewY(-6deg);
+    background-image: url("https://hopeforjustice.org/wp-content/uploads/2019/03/biker.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+} 
+
+.slanted__secondimg {
+	background-image: url("https://hopeforjustice.org/wp-content/uploads/2019/03/biker-men.jpg");
+}
+
+
+.slanted__box {
+	background-color:#FCEA10;
+	color:#0F2535;
+	padding:50px 25px;
+    transform: skewY(-6deg);   
+}
+
+.slanted__box--white {
+	background-color:#FFFFFF;   
+}
+
+.slanted__box--blue {
+	background-color:#0F2535;
+	color:white;  
+}
+
+
+.slanted__center {
+	width:100%;
+	display:flex;
+	justify-content: center;
+}
+
+.slanted__map {
+	width: calc(100% + 50px);
+	margin-left: -25px;
+	max-width: none;
+}
+
+
+
+
+.slanted__content {
+    transform: skewY(6deg);
+    display: flex;
+    flex-direction: column;
+}
+
+
+@include mq($from: tablet) {
+
+//tweaky styles
+.slanted__logo {width:158px;}
+.slanted__place {width:168px;}
+.slanted__date{width:200px;}
+.slanted__img {height:335px;}
+.slanted__header{height:400px;}
+.slanted__biker{width:500px; margin-top:-150px;}
+.slanted__multiple{width:350px;}
+.slanted__box{padding:100px 40px;}
+.slanted__ride {width:442px; margin-bottom: 10px;}
+.slanted__conquer {width:500px;}
+.slanted__map {width: calc(100% + 80px);margin-left: -40px;}
+.slanted__heights {font-size:24px;}
+.slanted__everest{width:300px;}
+.slanted__width {max-width:400px; margin: 0 auto;}
+.slanted__prices{width:245px;}
+.slanted__program {width: 136px; margin-bottom: 30px;}
+
+.slanted__partners {margin-top: 50px;}
+}
+
+
+@include mq($from: desktop) {
+
+//tweaky styles
+.slanted__split{display: flex;}
+.slanted__half{width:50%;}
+.slanted__img {height:400px; transform:skewY(0deg); margin-top: 0; width:50%;}
+.slanted__secondimg {display:none;}
+.slanted__play {transform: skewY(0deg);}
+.slanted__no-color {background-color:transparent;}
+.slanted__map {width: calc(100% + 40px);margin-right: -40px; margin-left:0; margin-top: -50px;}
+.slanted__multiple {margin:0;}
+.slanted__conquer{margin-left: -5px;}
+.slanted__box{transform:skewY(-2deg);}
+.slanted__noskew {transform:skew(0deg);}
+.slanted__content{transform:skewY(2deg);}
+.slanted__content-noskew {transform:skew(0deg);}
+.slanted__yellow {margin-top:-40px;}
+.slanted__light-blue {background-color:#4B5B67; color: white;}
+
+
+.slanted__header {
+	text-align: left;
+	width:50%;
+	align-items: flex-end;
+	padding-left:40px;
+}
+
+.slanted__inner {
+	width: 780px;
+	margin-left: auto;
+	align-items:flex-start;
+}
+
+.slanted__inner--right {
+	width: 50%;
+	margin-left: 0;
+}
+
+.slanted__reverse {
+	display:flex;
+	flex-direction: column-reverse;
+}
+
+.slanted__overmap {
+	margin-top:-210px;
+}
+
+}
+
+
+

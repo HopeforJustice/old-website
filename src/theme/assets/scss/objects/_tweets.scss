@@ -1,0 +1,42 @@
+/************************************************
+*  $_TWEETS.SCSS
+*************************************************/
+.tweets {
+	margin-bottom: $base-spacing-unit;
+	.tweet-text {
+		color: $medium-gray;
+	}
+	.tweet-details {
+		display: none;
+	}
+}
+.tweets__link {
+	overflow: hidden;
+	display: block;
+	color: $base-body-color;
+	margin-bottom: em(5);
+	position: relative;
+	padding-left: em(60);
+	min-height: em(46);
+	span {
+		display: block;
+	}
+	&:before {
+		@include font-size(42);
+		color: $red;
+		position: absolute;
+		left: 0;
+		top: 0;
+		line-height: 1.05;
+		vertical-align: top;
+	}
+}
+.tweets__title {
+
+	@include font-size(18);
+	font-weight: 700;
+	line-height: 1;
+}
+.tweets__handle {
+	color: $medium-gray;
+}

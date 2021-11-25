@@ -1,0 +1,28 @@
+/************************************************
+*  $_MEDIA.SCSS
+*************************************************/
+
+// Wordpress core image alignments
+
+.aligncenter,
+div.aligncenter, a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.alignright {
+    float:right;
+}
+
+.alignleft {
+    float: left;
+}
+
+a img.alignright {
+    float: right;
+}
+
+a img.alignleft {
+    float: left;
+}

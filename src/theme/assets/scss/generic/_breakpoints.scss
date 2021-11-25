@@ -1,0 +1,34 @@
+/************************************************
+*  $_BREAKPOINTS.SCSS
+*************************************************/
+/**
+ * These values will not show up in content, but can be 
+ * queried by JavaScript to know which breakpoint is active.
+ * Add or remove as many breakpoints as you like.
+ */
+body:before {
+  content: "mobile";
+  display: none; /* Prevent from displaying. */
+}
+@include mq($from: mobileLandscape) {
+  body:before {
+    content: "mobileLandscape";
+  }	
+}
+@include mq($from: tablet) {
+  body:before {
+    content: "tablet";
+  }
+}
+@include mq($from: desktop) {
+  body:before {
+    content: "desktop";
+  }
+}
+
+@include mq($from: desktopLarge) {
+  body:before {
+    content: "desktopLarge";
+  }
+}
+

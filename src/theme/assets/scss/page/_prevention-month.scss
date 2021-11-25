@@ -1,0 +1,97 @@
+/************************************************
+*  $_PREVENTION MONTH TEMPLATE STYLING.SCSS
+*************************************************/
+.page-template-page-prevention-month {
+	.inner {max-width:$homepage-width;}
+}
+
+.prevention {
+	background-color: white;
+	.button {margin-top:25px;}
+	h2 {margin-bottom: 25px;}
+}
+
+.prevention__split {
+	display:flex;
+	flex-wrap: wrap;
+	width:100%;
+}
+
+.prevention__padding {
+	text-align: center;
+	padding: 40px 10px;
+}
+
+.prevention__hero {
+	background-size: cover;
+	min-height:60vh;
+	background-repeat: no-repeat;
+}
+
+.prevention__logo {
+	@include span-columns(17);
+	@include shift(6);
+	margin-top: 80px;
+}
+
+.prevention__line {
+	height: 50px;
+	width:1px;
+	background-color: black;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
+
+.prevention__date {
+	text-align: center;
+	margin-top: 20px;
+	@include font-size(12);
+}
+
+.prevention__about {
+	background-color: black;
+	color:white;
+}
+
+.prevention__sts {
+	background-color:$hfj-red;
+	color:white;
+	background-image: url(https://hopeforjustice.org/wp-content/uploads/2020/01/sts.png);
+	background-size: cover;
+}
+
+.prevention__slider {
+	width:100%;
+	.flex-viewport {border-radius: 10px;}
+	.flexslider {margin-bottom: 0;}
+	max-width: 600px;
+	margin: 0 auto;
+	padding-top:0;
+}
+
+.prevention__partner, .prevention__form {
+	background-color:#F7F7F7;
+}
+
+.prevention__form {text-align: left;}
+
+//better mobiles
+@media only screen and (min-width: 321px) {
+	.prevention__date {@include font-size(16);}
+	.prevention__logo {margin-top: 130px;}
+}
+
+@include mq($from: tablet) {
+	.prevention__hero {min-height:70vh;}
+	.prevention__logo {margin-top: 180px;}
+	.prevention__padding {padding: 60px 80px;}
+	.prevention__half {width:100%; text-align: center;}
+}
+
+@include mq($from: desktop) {
+	.prevention__slider {width:auto;}
+	.prevention__hero {min-height:100vh;}
+	.prevention__date {@include font-size(24);}
+	.prevention__half {width:50%; text-align: left;}
+}

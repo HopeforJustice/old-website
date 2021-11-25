@@ -1,0 +1,199 @@
+/************************************************
+*  $_TYPOGRAPHY.SCSS
+*************************************************/
+html {
+  font-size: 87.5%;
+}
+
+body {
+  color: $base-font-color;
+  font-family: $base-font-family;
+  @include font-size($base-font-size); 
+  line-height: $base-line-height;
+}
+
+p {
+  margin: 0 0 $half-spacing-unit;
+}
+
+a {
+  color: $base-link-color;
+  text-decoration: none;
+  @include transition(color 0.1s linear);
+
+  &:hover {
+    color: $hover-link-color;
+  }
+
+  &:active, &:focus {
+    color: $hover-link-color;
+    outline: none;
+  }
+}
+
+hr {
+  border-bottom: 1px solid $base-border-color;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: $base-line-height 0;
+}
+
+img {
+  margin: 0;
+  max-width: 100%;
+}
+
+abbr, acronym {
+  border-bottom: 1px dotted $base-border-color;
+  cursor: help;
+}
+
+address {
+  display: block;
+  margin: 0 0 ($base-line-height / 2);
+}
+
+hgroup {
+  margin-bottom: $base-line-height / 2;
+}
+
+del {
+  color: lighten($base-font-color, 15);
+}
+
+blockquote {
+  font-weight: 700;
+  font-style: italic;
+  @include font-size(18);
+  line-height: 1.166666667;  
+  padding: 0;
+  margin: 0 0 em(13px, 18) 0;
+}
+blockquote.quote--thin {
+  font-weight: 300;
+  font-family: $open-sans;
+  @include font-size(24);
+  line-height: 1.208333333;
+  margin: 0;
+  padding-top: em(7px, 24);
+  padding-bottom: em(6px, 24);  
+}
+blockquote.quote--blue {
+  color: $light-blue;
+}
+
+cite {
+  color: lighten($base-font-color, 25);
+  font-style: italic;
+
+  &:before {
+    content: '\2014 \00A0';
+  }
+}
+
+
+// text styles - local colour changes
+
+.text--light {
+  color: $lightish-gray;
+}
+.text--dark-gray {
+  color: $mediumish-gray;
+}
+.text--red {
+  color: $red;
+}
+.text--blue {
+  color: $blue;
+}
+.text--green {
+  color: $green;
+}
+.text--teal {
+  color: #6BBA9D;
+}
+.text--light-blue {
+  color: $light-blue;
+}
+.text--white {
+  color: $white;
+}
+
+// text styles
+
+.text--large-print {
+  @include font-size(16);
+  line-height: 1.5;
+}
+
+i {
+  background-image: url("assets/img/highlight.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-style: normal;
+}
+
+.text--side-line {
+  border-left: 5px solid $orange;
+  padding-left:20px;
+}
+
+// text styles - broader colour schemes
+
+.light {
+  color: $base-font-color;
+}
+.dark {
+  color: $white;
+  -webkit-font-smoothing: antialiased;
+  .share a {
+    color: $white;
+  }
+}
+
+.drop-cap:first-letter {
+    font-size: 4.8em;
+    margin-right: 12px;
+    margin-bottom: -19.2px;
+    margin-top: -19px;
+    margin-left: -5px;
+    float: left;
+    font-weight: 100;
+}
+
+.drop-cap--red:first-letter {
+  color: $hfj-red;
+}
+
+@include mq($from: mobileLandscape, $until: tablet) {
+  blockquote {
+    @include font-size(23);
+    line-height: 1.260869565;
+    margin-bottom: em(17px, 23);
+  }
+  blockquote.quote--thin {
+    @include font-size(29);
+    line-height: 1.172413793;
+    padding-top: em(9px, 29);
+    padding-bottom: em(9px, 29);
+  }  
+}
+
+@include mq($from:tablet) {
+  blockquote {
+    @include font-size(29);
+    line-height: 1.103448276;
+    margin-bottom: em(21px, 29);   
+  }  
+  blockquote.quote--thin {
+    @include font-size(38);
+    line-height: 1.184210526;
+    padding-top: em(11px, 38);
+    padding-bottom: em(11px, 38);
+  }
+  .text--large-print {
+    @include font-size(18);
+    line-height: 1.444444444;
+  }  
+}

@@ -1,0 +1,44 @@
+/************************************************
+*  $_GIFT-RECEIPT.SCSS
+*************************************************/
+
+.gift-receipt {
+	background-color: white;
+	padding: 50px 0 20px 0;
+}
+
+
+.gift-receipt__message {
+	max-width: 466px;
+	margin-top: 50px;
+}
+
+.gift-receipt__lowercase {
+	text-transform: lowercase;
+}
+
+.gift-receipt__details {
+	display:flex;
+	margin-top: 50px;
+	max-width: 600px;
+	text-align: left;
+
+}
+.gift-receipt__text {
+	margin-left: 20px;
+}
+
+.gift-receipt__img {
+	width:120px;
+	height: 120px;
+}
+
+
+@include mq($from: tablet) {
+
+.gift-receipt__img {
+	width:200px;
+	height: 200px;
+}
+
+}

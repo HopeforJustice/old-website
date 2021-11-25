@@ -1,0 +1,179 @@
+/************************************************
+*  $_HCV.SCSS Hope challenge virtual
+*************************************************/
+.HCV__header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width:100%;
+	height:140px;
+	background-color: #E8E8E8;
+	.HCV__logo {
+		width:250px;
+	}
+}
+
+.HCV__Ticker {
+	overflow: hidden;
+	height:70px;
+	.tickercontainer {
+		height:auto;
+	}
+	li {margin-left: 10px; margin-right: 10px;}
+}
+
+.HCV__ti-image {
+	margin:20px 0;
+	height:30px;
+}
+
+.HCV__hero {
+	background-image: url(https://hopeforjustice.org/wp-content/uploads/2020/04/Hope-challenge-FB-Event.jpg);
+	height: 210px;
+	width:100%;
+	background-size: cover;
+	background-position: bottom;
+}
+
+.HCV__content {
+	width:100%;
+	padding: 0 20px;
+	padding-bottom: 40px;
+	margin-top: -40px;
+	.button {
+		margin-right: 20px;
+	}
+}
+
+.HCV__inner {
+	padding:20px;
+	background-color:#ffffff;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.HCV__part {
+	margin-bottom: 40px;
+}
+
+.HCV__flags {
+	max-width: 320px;
+	display: flex;
+	justify-content: space-between;
+	align-items:center;
+	margin-bottom: 20px;
+}
+
+.HCV__flag {
+	width: 40px;
+	height:40px;
+	border-radius: 100%;
+	background-size: cover;
+}
+
+.HCV__title, .HCV__img {
+	margin-bottom: 20px;
+}
+
+.HCV__title--blue {color:#50C8EF;}
+.HCV__title--red {color:#EE4452;}
+
+.HCV__faq {
+	background-color: #E8E8E8;
+	padding-top:20px;
+	.HCV__inner {
+		background-color:transparent;
+	}
+}
+@include mq($from: tablet) {
+
+.HCV__header {
+	height:260px;
+	.HCV__logo {
+		width:450px;
+	}
+}
+
+.HCV__inner {
+	padding:40px;
+}
+
+.HCV__hero {
+	height:430px;
+}
+
+}
+
+@include mq($from: desktop) {
+
+.HCV__header {
+	height:360px;
+	.HCV__logo {
+		width:630px;
+	}
+}
+
+.HCV__inner {
+	background-color:transparent;
+	padding:40px;
+}
+
+.HCV__hero {
+	height:830px;
+}
+
+.HCV__inner {
+	max-width: 980px;
+	padding:60px;
+	padding-bottom:0;
+}
+
+.HCV__flags {
+	margin:0 auto;
+	margin-bottom: 60px;
+}
+
+.HCV__flag {
+	width:50px;
+	height:50px;
+
+}
+
+.HCV__content {
+	margin-top: -650px;
+	.button {font-size: 18px;}
+}
+
+.HCV__faq {
+	margin-top: 0;
+	p{font-size: 18px;}
+	.HCV__inner {
+		.HCV__faq-content {
+			padding: 40px;
+			padding-top:0;
+		}
+	}
+}
+
+.HCV__center {
+	text-align: center;
+	color:#ffffff;
+	margin-bottom: 80px;
+	.HCV__title {
+		color:#ffffff;
+		max-width: 600px;
+		margin:0 auto;
+	}
+}
+
+.HCV__white {
+	background-color: #ffffff;
+	padding: 40px;
+	padding-bottom:0;
+	p {font-size: 18px; margin-bottom: 30px;}
+	.HCV__title, .HCV__img {
+		margin-bottom: 30px;
+	}
+}
+
+}

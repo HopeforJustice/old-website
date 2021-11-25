@@ -1,0 +1,159 @@
+/************************************************
+*  $_GIVING-WIDGET.SCSS
+*************************************************/
+
+//remove input berfore
+.giving-widget .input--pre-dollar::before {display:none;}
+.giving-widget .donation-form__donation-input {
+	border-right: 2px solid white;
+    border-radius: 0px;
+}
+.giving-widget button {
+	height: 100%;
+	border-radius:0 16px 16px 0;
+}
+
+
+//default width --- made responsive by guardian.scss in /pages
+//done this way as responsive behaviour depends on context
+//could just add extra classes to avoid this objects styling being in two stylsheets 
+.giving-widget {
+	@include span-columns(8);
+	border-radius: 7px;
+	display: flex;
+	flex-direction: column;
+}
+.giving-widget__header {
+	padding: 30px;
+	text-align: center;
+	border-bottom: 1px solid #707070;
+}
+.giving-widget__body{padding:34px 40px 43px 40px;}
+.giving-widget__content{
+	display: flex;
+	flex-direction: column;
+	align-items:center;
+}
+.giving-widget__footer {
+	margin-top: auto;
+	text-align: center;
+	padding:15px;
+	border-top: 1px solid #707070;
+	@include font-size(12);
+}
+.giving-widget__options {
+	display:flex;
+	justify-content:space-between;
+	margin-bottom: 16px;
+	width:100%;
+}
+.giving-widget__option {
+	height:63px;
+	border-radius:16px;
+	background-color: $orange;
+	opacity: 0.5;
+	border: 2px solid $orange;
+	text-align: center;
+	line-height: 61px;
+	@include font-size(18);
+	font-weight: bold;
+	color:white;
+	flex:1;
+	margin-right: 16px;
+	&:nth-last-child(1) {margin-right: 0;}
+}
+
+.giving-widget__currency {
+	color: #333;
+	opacity: 0.3;
+	font-size: 12px;
+	margin-top: 10px;
+	text-decoration: underline;
+    cursor: pointer;
+}
+
+
+.giving-widget__option:hover {cursor:pointer;}
+
+.giving-widget__option--active {opacity: 1;border: 3px solid black;}
+
+.giving-widget__custom-amount {
+	height:63px;
+	background-color: $orange;
+	text-align: center;
+	color: white;
+	opacity: 0.5;
+	color:white;
+	font-weight: bold;
+	position: relative;
+	border-radius:16px;
+	margin-bottom: 26px;
+	width:100%;
+	display:flex;
+	align-items:center;
+	input {
+		@include font-size(18);
+		background-color: transparent;
+		color: white;
+		font-weight: bold;
+    	border: none;
+    	text-align: left;
+    	height:58px;
+    	padding-left: 65px;
+    	margin:0;
+    }
+	input::-webkit-input-placeholder {color: white;} /* Edge */
+	input:-ms-input-placeholder {color: white;}/* Internet Explorer 10-11 */
+	input::placeholder {color: white;}
+	input:focus {outline:none; box-shadow: none; border: none;}
+	//currency before input
+	&::before {
+	 position: absolute;
+     content:"£";
+     left: 24px;
+     @include font-size(18);
+	}
+}
+
+
+.giving-widget__custom-amount--pre-dolar::before {
+	content:"$";
+}
+
+.giving-widget__custom-amount--pre-kr::before {
+	content:"Kr";
+}
+
+
+@include mq($from: tablet) { 
+	.giving-widget {border: 1px solid #707070;}
+}
+
+@include mq($from: desktopLarge) { 
+	.giving-widget__option {
+		height:90px; 
+		line-height: 88px;
+		@include font-size(22);
+	}
+	.giving-widget__custom-amount {
+		height:90px;
+		input {@include font-size(22);}
+		&::before {@include font-size(22);}
+	}
+
+	.giving-widget__footer {
+	@include font-size(14);
+	}
+}
+
+@include mq($from: desktopXXLarge) {
+	.giving-widget__body{padding:45px 89px;}
+}
+
+
+
+
+
+
+
+

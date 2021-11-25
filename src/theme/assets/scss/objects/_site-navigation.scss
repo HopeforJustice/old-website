@@ -1,0 +1,215 @@
+/************************************************
+*  $_SITE-NAVIGATION.SCSS
+*************************************************/
+
+// Main menu
+///////////////////////////////////////////////////////////////////////////////
+
+.site-navigation {
+	float:right;
+	margin: em(14px) 0 em(12px);
+  .menu-item > a {
+		color:$base-font-color;
+		font-weight: 700;
+		padding: em(2px) em(6px);
+	}
+	// active states
+	.menu > .current-menu-item > a {
+			background-color: $lighter-gray;
+	}
+	.menu-item-button > a {
+    @extend .button--blue;
+    border-color: $red;
+    background-color: $red;
+    color: $white;
+    margin-top: 0;
+    margin-bottom: 0;
+    &:hover {
+      background-color: $red;
+      color: #ffffff;
+    }
+	}
+  .sub-menu {
+    position: absolute;
+    top: -9999em;
+    left: -9999em;
+    opacity: 0;
+  }
+  .menu-item-expanded {
+    position: relative;
+    .sub-menu {
+      opacity: 1;
+      @include transition (opacity .2s ease-in-out);      
+      background-color: $base-body-color;
+      left: 50%;
+      margin-left: em(-75px);
+      margin-top: $half-spacing-unit;
+      padding-top: em(2px);
+      padding-bottom: em(2px);
+      top: 100%;
+      width: em(150px);
+      .menu-item {
+        display: block;        
+        > a {
+          color: $white;
+          display: block;
+          @include font-size(13);
+          line-height: 1.692307692;
+          padding: em(4px, 13) em(8px, 13);
+          -webkit-font-smoothing: antialiased;
+          &:hover {
+            background: $black;
+          }
+        }
+      }
+      .current_page_item a {
+        background-color: $black;
+      }
+    }
+  }
+  // mobile nav button
+	.menu-btn {
+		display: none;
+    margin-right: em(-10px);
+    padding: em(2px) em(8px);
+    color: $base-font-color;
+    font-weight: 700;
+		&:before {
+			margin-left:em(5px);
+		}
+	}
+}
+.push-push .menu-btn { 
+  &:before {
+    content: '\E601';
+  }
+}
+
+#mobile-navigation {
+  display: none;
+}
+
+.mobile-options { display: none;}
+
+@include mq($from: mobileLandscape) { 
+  .site-navigation {margin: em(25px) 0 em(12px);}
+}
+
+@include mq($until: tablet) {
+
+  // Mobile navigation
+  ///////////////////////////////////////////////////////////////////////////////
+
+.mobile-options {
+  font-size: 10px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  background-color: white; 
+  border-radius: 20px;
+  padding: 5px 5px 5px 8px;
+  .mobile-donate {
+    background-color: #CA1517;
+    color: white;
+    border-radius: 20px;
+    padding: 4px 10px 4px 10px;
+    text-align: center;
+    vertical-align: center;
+  }
+
+}
+
+  #mobile-navigation {
+    background: $lighter-gray;
+    border-left: darken($lighter-gray, 20);
+    display: block;
+  	.menu-item {
+  		position:relative;
+  		border-bottom: 1px solid $white;
+      display: block;
+
+  		a {
+  			padding: em(10px) em(20px);
+  			color: $base-font-color;
+        display: block;
+        outline: none;        
+  		}
+  		.gi-plus {
+  			position: absolute;
+  			right: 0;
+  			top: 0;
+  			border-left: 1px solid $white;
+  			padding: em(10px) em(10px);
+  			text-align: center;
+  		}
+      &.open .gi-plus:before {
+        content: '\E606';
+      }
+  		&.menu-item-button a {
+			background-color: $red;
+			color: $white;
+  		}
+  		&.menu-item-has-children.open {
+  			border-bottom: 0 none;
+  		}
+      &.current_page_item a {
+        background-color: $dark-gray;
+        color: $white;    
+      }      
+  	}
+    .sub-menu {
+      display: none;
+      li {
+        background-color: $white;
+        border-bottom: 1px solid $lighter-gray;        
+      }
+    }
+	}
+
+  .pushy {
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch; /* enables momentum scrolling in iOS overflow elements */
+    }
+
+  .pushy-right {
+    @include transform(translate3d(200px,0,0));
+    }
+  .pushy-open {
+    @include transform(translate3d(0,0,0));
+    }
+  .container-push, .push-push {
+    @include transform(translate3d(-200px,0,0));
+    }
+  .pushy, #content, .pushy-container {
+    @include transition-property(transform, left);
+    @include transition-duration(0.2s);
+    @include transition-timing-function(cubic-bezier(.16, .68, .43, .99));
+    @include backface-visibility(hidden);
+    @include perspective(1000);
+    }
+  .site-overlay {
+    display: none;
+  }
+  .pushy-active .site-overlay{
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 200px;
+    z-index: 9999;
+    overflow-x: hidden;
+  }
+
+  #menu-norway-site-navigation {display: none;}
+	#menu-site-navigation {display: none;}
+	#site-navigation .menu-btn {display:flex; flex-direction: row-reverse; align-items: center;}
+  #site-navigation .menu-btn:before {margin-top: 2px; margin-right: 8px;}
+}
+

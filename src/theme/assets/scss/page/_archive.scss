@@ -1,0 +1,13 @@
+/************************************************
+*  $_ARCHIVE.SCSS
+*************************************************/
+// news archive
+.archive {
+	&__search {
+		margin-top: $base-spacing-unit;
+	}
+	&__cats {
+		margin-top: $base-spacing-unit/2;
+		margin-bottom: $base-spacing-unit*2;
+	}
+}

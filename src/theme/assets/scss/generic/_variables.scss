@@ -1,0 +1,129 @@
+/************************************************
+*  $_VARIABLES.SCSS
+*************************************************/
+
+// This file precedes all others in the compilation process 
+// (including Bourbon) - so don't use any mixins in here
+
+// Sizes
+///////////////////////////////////////////////////////////////////////////////
+
+$base-font-size: 14;
+$em-base: 14px;
+$base-line-height: 1.5;
+$base-border-radius: 0.357142857em;
+$base-spacing-unit: 1.5em;
+$half-spacing-unit: 0.75em;
+
+// Typography
+///////////////////////////////////////////////////////////////////////////////
+
+$lato: "lato",Lato,sans-serif;
+$open-sans: "open-sans",Open Sans, sans-serif;
+
+$base-font-family: $lato;
+
+// Grid
+///////////////////////////////////////////////////////////////////////////////
+$max-width: 68.571428571em;
+$homepage-width: 1680px;
+$grid-columns: 24;
+$gutter: golden-ratio(3em, 1);
+$visual-grid: false;
+$visual-grid-color: red;
+$visual-grid-index: front;
+$visual-grid-opacity: 0.1;
+
+// Responsive Breakpoints
+///////////////////////////////////////////////////////////////////////////////
+
+$mq-breakpoints: (
+    mobile:  320px,
+    mobileMedium:375px,
+    mobileLandscape: 480px,
+    tablet:  768px,
+    desktop: 980px,
+    desktopLarge: 1024px,
+    desktopXLarge: 1200px,
+    desktopXXLarge: 1500px,
+    iMac: 1800px
+) !default;
+
+//$mq-show-breakpoints: (mobile, mobileLandscape, tablet, desktop);
+
+// Colors
+///////////////////////////////////////////////////////////////////////////////
+
+//brand 
+$red: #CA1517;
+$green: #14ca61;
+$blue: #2e9df7;
+$light-blue: #67ccf0;
+$orange: #F5BC26;
+
+$red-text: #a01015;
+$green-text: #0aa24a;
+$blue-text: #2d81ba;
+$light-blue-text: #3eadd4;
+$orange-text: #a75b01;
+
+$twitter: #479ee2;
+$facebook: #43609c;
+$linkedin: #1985bd;
+$vine: #3bb9ff;
+$youtube: #cf1312;
+$instagram: #8c6239;
+
+$black: #000;
+$darker-gray: #252525;
+$dark-gray: #404040;
+$mediumish-gray: #666;
+$medium-gray: #999;
+$lightish-gray: #c7c9c7;
+$light-gray: #c2c2c2;
+$lighter-gray: #ebebeb;
+$white: #fff;
+$hfj-gray: #221F1F;
+$hfj-red: #D21220;
+
+$light-red: #FBE3E4;
+$light-yellow: #FFF6BF;
+$light-green: #E6EFC2;
+
+// Body Color
+$base-body-color: $darker-gray;
+
+//  Font Colors
+$base-font-color: $dark-gray;
+$base-accent-color: $blue;
+
+//  Text Link Colors
+$base-link-color: $base-accent-color;
+$hover-link-color: darken($base-accent-color, 15);
+
+// Border color
+$base-border-color: $lightish-gray;
+
+// Flash Colors
+$error-color: $light-red;
+$notice-color: $light-yellow;
+$success-color: $light-green;
+
+// Forms
+///////////////////////////////////////////////////////////////////////////////
+
+$form-border-color: $base-border-color;
+$form-border-color-hover: darken($base-border-color, 10);
+$form-border-color-focus: $base-accent-color;
+$form-border-radius: $base-border-radius;
+$form-box-shadow: inset 0 1px 3px hsla(0, 0%, 0%, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px rgba(darken($form-border-color-focus, 5), 0.7);
+$form-font-size: 18;
+$form-font-family: $base-font-family;
+
+// Z-index
+///////////////////////////////////////////////////////////////////////////////
+$z-modal: 1000;
+$z-header: 900;
+$z-content: 300;
+$z-background: 200; 

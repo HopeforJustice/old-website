@@ -1,0 +1,17 @@
+/*******************************************************************************
+*  	$_SHARE
+********************************************************************************/
+.share {
+	margin-bottom: $base-spacing-unit;
+	overflow: hidden;
+	text-align: center;
+	a {
+		@include font-size(26);
+		overflow: hidden;
+		line-height: 1.857142857;
+		color: $base-font-color;
+	}
+	.gi-twitter {
+		margin-right: em(10px, 26px);
+	}
+}

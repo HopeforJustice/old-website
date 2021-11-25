@@ -1,0 +1,71 @@
+{
+    "key": "group_553a21cb5ef00",
+    "title": "News stories",
+    "fields": [
+        {
+            "key": "field_552ece193da99",
+            "label": "News options",
+            "name": "news_options",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "top-story": "Top Story"
+            },
+            "default_value": {
+                "": ""
+            },
+            "layout": "horizontal",
+            "toggle": 0,
+            "allow_custom": 0,
+            "save_custom": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_55301cdcf163f",
+            "label": "News source",
+            "name": "news_source",
+            "type": "text",
+            "instructions": "Use this field to override the author name with a news source if needed.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "news source",
+            "prepend": "",
+            "append": "",
+            "formatting": "html",
+            "maxlength": 50,
+            "readonly": 0,
+            "disabled": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1534520762
+}

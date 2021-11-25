@@ -1,0 +1,304 @@
+/************************************************
+*  $_FORMS.SCSS
+*************************************************/
+fieldset {
+  border: 1px solid $base-border-color;
+  margin: 0 0 $half-spacing-unit 0;
+  padding: $base-spacing-unit;
+}
+
+input,
+label,
+select {
+  display: block;
+  font-family: $form-font-family;
+  @include font-size(18);
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: $half-spacing-unit/2;
+
+  &.required:after {
+    content: "*";
+  }
+
+  abbr {
+    display: none;
+  }
+}
+
+textarea,
+#{$all-text-inputs},
+select[multiple=multiple] {
+  box-sizing:border-box;
+  @include transition(border-color);
+  background-color: $white;
+  color: $base-font-color;
+  border: 1px solid $form-border-color;
+  border-radius: $form-border-radius;
+  font-family: $form-font-family;
+  @include font-size(18);
+  line-height: 1.222222222;
+  height: em(40, 18);
+  margin-bottom: $half-spacing-unit;
+  padding: em(8px,18);
+  width: 100%;
+
+  &:hover {
+    //border-color: $form-border-color-hover;
+  }
+
+  &:focus {
+    //border-color: $form-border-color-focus;
+    //box-shadow: $form-box-shadow-focus;
+    outline: none;
+  }
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="search"] {
+  @include appearance(none);
+}
+
+input[type="checkbox"], input[type="radio"] {
+  display: inline;
+  margin-right: $half-spacing-unit / 2;
+}
+
+input[type="file"] {
+  width: 100%;
+}
+
+
+select {
+  margin-bottom: $base-spacing-unit;
+  box-sizing:border-box;
+  @include transition(border-color);
+  background-color: $white;
+  color: $base-font-color;
+  border: 1px solid $form-border-color;
+  border-radius: $form-border-radius;
+  font-family: $form-font-family;
+  @include font-size(18);
+  margin-bottom: $half-spacing-unit;
+  padding: em(6px, 18) em(8px,18);
+  height: em(40, 18);  
+  width: 100%;  
+}
+
+button,
+input[type="submit"] {
+  @extend .button--gray;
+  @include appearance(none);
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.form--dark {
+  textarea,
+  #{$all-text-inputs},
+  select[multiple=multiple] {
+    background-color: $mediumish-gray;
+    border-color: $mediumish-gray;
+    color: $white;
+    @include placeholder {
+      color: $darker-gray; 
+    }    
+  }
+}
+.form--small {
+  textarea,
+  #{$all-text-inputs},
+  select[multiple=multiple] {
+    @include font-size(14);
+    line-height: $base-line-height;
+    padding: em(4px, 14) em(8px, 14);
+  }
+}
+
+// hidden labels 
+.form--hidden-label label{
+  @include accessibility;
+}
+
+// input extras 
+.input--pre-pound, .input--pre-dollar {
+  position: relative;
+  input[type="text"], input[type="number"] {
+    padding-left: em(50px,18);    
+  }
+  &:before {
+    content: '£';
+    position: absolute;
+    padding-top: em(8px, 18);
+    padding-left: em(12px,18);
+    top: 0;
+    left: 0;
+    color: $medium-gray;
+    @include font-size(18);
+    line-height: 1.222222222;
+  } 
+}
+.input--pre-dollar:before {
+  content: 'US$';
+}
+
+
+
+// Gravity forms specific styling
+///////////////////////////////////////////////////////////////////////////////
+
+.gfield_label, .field_sublabel_above label {
+  font-size: em(12px);
+  text-transform: uppercase;
+  opacity: 0.6;
+  font-weight: 300;
+}
+
+
+.gform_title {
+  font-size: 31px;
+  margin-bottom: 20px;
+}
+
+.gform--single-line {
+  .gfield {
+    display: inline;
+    float: left;
+    margin-right: em(10px);
+    input {
+      margin-bottom: 0;
+    }
+  }
+  .gform_footer .button--gray {
+    margin-top: 0;
+  }
+}
+
+.gform_card_icon {
+  display: inline;
+  margin-right: em(5px);
+  color: $lightish-gray;
+  &.gform_card_icon_selected {
+    color: $dark-gray;
+  }
+}
+
+.gfield_radio {
+  margin-bottom: 20px;
+  label {
+    display: inline;
+  }
+}
+.gfield_error {
+  #{$all-text-inputs} {
+    border-color: $red !important;
+    background-color: lighten($red,50%);
+  }
+}
+.gform_footer, .gform_page_footer {
+  display: flex;
+  br {display: none;}
+}
+.gfield_required {
+  color: $red;
+  padding: 0 em(3px);
+}
+.validation_error {
+  color: #d21220;
+  margin-bottom: $half-spacing-unit;
+  font-style: italic;
+}
+.validation_message {
+  margin-bottom: $half-spacing-unit;
+  font-style: italic;
+  color: #d21220;
+}
+
+.hidden_label label {display:none;}
+.gfield_visibility_hidden {display:none;}
+.gf_invisible {display:none;}
+
+.hidden_label label {display:none;}
+.gfield_visibility_hidden {display:none;}
+.gf_invisible {display:none;}
+
+.capitalise {
+  text-transform:uppercase;
+}
+
+.gform_footer button, .gform_footer .button {
+  margin-bottom: 0;
+}
+
+.gform_page_footer button, .gform_page_footer .button {
+  margin-bottom: 0;
+}
+
+.gform_page_footer {
+  display:flex;
+  justify-content:space-between;
+}
+
+.gfield_radio {
+  display: flex;
+}
+
+.gfield_radio li label {
+  margin-right:5px;
+  font-weight:normal;
+  font-size:14px;
+}
+
+.gf_progressbar_wrapper {
+  display:none;
+}
+
+.gform_previous_button, .gform_next_button, #gform_submit_button_59 {
+  border-radius: .357142857em;
+    border-width: 2px;
+    border-style: solid;
+    display: inline-block;
+    font-weight: 700;
+    font-size:18px;
+    line-height: 1.857142857;
+    white-space: nowrap;
+    padding: 0 1.5em;
+    margin: .4285714286em 0;
+    -webkit-font-smoothing: antialiased;
+    border-color: #2e9df7;
+    background-color: #2e9df7;
+    color:#ffffff;
+}
+
+
+/* ajax forms ------------------------------------------------------*/
+
+
+.gform_wrapper .gform_ajax_spinner {
+  width:15px;
+  height:15px;
+  position:absolute;
+  left:50%;
+  bottom:100px;
+  transform: translate(-50%, -50%);
+}
+
+// hide the honeypot field  
+
+.gform_validation_container,
+.gform_wrapper .gform_validation_container,
+body .gform_wrapper li.gform_validation_container,
+body .gform_wrapper .gform_body ul.gform_fields li.gfield.gform_validation_container,
+body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
+  display: none !important;
+  position: absolute !important;
+  left: em(-9000px);
+}
+

@@ -1,0 +1,34 @@
+<div class="colgroup-4">
+    {{#fundraisers}}
+        
+    <div class="col">
+        <a class="fundraiser" href="{{fundraiser_url}}" class="fundraiser__image">
+            {{#if member_image_large}}
+                <img src="{{member_image_large}}" class="fundraiser__image"/>
+            {{else}}
+                <img src="https://hopeforjustice.org/wp-content/uploads/2014/12/GenericFundraiser.jpg" class="fundraiser__image fundraiser__image__placeholder"/>
+            {{/if }}
+            {{#and first_name last_name}}
+                <p class="fundraiser__name">{{ first_name }} {{ last_name }}</p>
+            {{/and}}
+            {{#if event_name}}
+                <h3 class="fundraiser__event">{{truncate event_name 45 "..."}}</h3>
+            {{/if}}
+            {{#gt num_donors 0}}
+                <p>{{inflect num_donors "supporter" "supporters" true}}</p>
+            {{/gt}}
+            {{ near_goal }}
+            {{#gt goal 0}}
+                <div class="thermometer">
+                    <div class="thermometer__progress" {{thermometer_width}}></div>
+                    <div class="thermometer__raised">${{total_raised}}</div>
+                    <div class="thermometer__goal">${{goal}}</div>
+                </div>
+            {{/gt}}
+            {{agree_button}}
+
+        </a>
+    </div>
+
+    {{/fundraisers}}
+</div>

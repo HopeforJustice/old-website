@@ -1,0 +1,46 @@
+/********************************
+*  _CAT-NAV.SCSS
+*********************************/
+.cat-nav {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	&__item {
+
+		&__current {
+			.cat-nav__link {
+				background-color: $white;
+				color: $base-font-color;
+			}
+		}
+	}
+	&__link {
+		display: block;
+		text-align: center;
+	}
+}
+@include mq($until: mobileLandscape) {
+	.cat-nav {
+		&__item {
+			@include span-columns(12);
+			@include omega(2n);
+		}
+	}
+}
+@include mq($from: mobileLandscape, $until: tablet) {
+	.cat-nav {
+		&__item {
+			@include span-columns(8);
+			@include omega(3n);
+		}
+	}
+}
+// everything from tablet portrait up
+@include mq($from: tablet) {
+	.cat-nav {
+		&__item {
+			@include span-columns(4);
+			@include omega(6n);			
+		}
+	}
+}

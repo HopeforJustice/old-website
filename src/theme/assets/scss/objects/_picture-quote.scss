@@ -1,0 +1,127 @@
+/************************************************
+*  $_PICTURE-QUOTE.SCSS
+*************************************************/
+.picture-quote {
+	padding-top: 50px;
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 50px;
+}
+
+.picture-quote__img {
+	background-image: url("https://hopeforjustice.org/wp-content/uploads/2019/09/I-am-a-Guardian-because-web@2x.jpg");
+	background-size: cover;
+	width:80%;
+	margin: 0 auto;
+	height:350px;
+	position: relative;
+	border-radius: 7px;
+}
+
+.picture-quote__play {
+	position: absolute;
+	left: 50%;
+	top:50%;
+	transform: translate(-50%, -50%);
+}
+
+.picture-quote__quote {
+	@include font-size(18);
+	font-weight: bold;
+	text-align: center;
+	padding: 50px 20px;
+	padding-bottom:0;
+
+}
+
+@include mq($from: mobileLandscape) {
+
+
+}
+
+// from tablet up
+@include mq($from: tablet) {
+.picture-quote__marks {display:none;}
+
+.picture-quote {
+	flex-direction: row-reverse;
+	flex:1;
+	align-items: center;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.picture-quote__quote {
+	flex:1;
+	@include font-size(24);
+	margin-top: -20px;
+	margin-right: -50px;
+	z-index: 1;
+	background-color: #fff;
+	border-radius: 7px;
+	padding: 40px;
+	position: relative;
+	text-align: left;
+}
+
+.picture-quote__quote::after {
+	content: "";
+	width: 87px;
+	height: 71px;
+	position: absolute;
+	background-image: url(https://hopeforjustice.org/wp-content/uploads/2019/09/mark@2x.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	right:70px; bottom: -53px;
+	transform: rotate(180deg);
+	opacity: 0.3;
+}
+
+.picture-quote__quote::before {
+	content: "";
+	width: 87px;
+	height: 71px;
+	position: absolute;
+	background-image: url(https://hopeforjustice.org/wp-content/uploads/2019/09/mark@2x.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	left:32px; top:-53px;
+	opacity: 0.3;
+}
+
+.picture-quote__img {
+	width:308px;
+	height:410px;
+	margin-right: 50px;
+	z-index: 0;
+}
+
+
+
+}
+// from desktop 
+@include mq($from: desktop) {
+.picture-quote {padding: 100px 0;}
+
+.picture-quote__img {
+	margin-right: 0;
+}
+}
+
+// from desktop large 
+@include mq($from: desktopLarge) {
+.picture-quote__img {
+	width:388px;
+	height:490px;
+}
+.picture-quote__quote::after{
+    right: 100px;
+    bottom: -27px;
+}
+}
+
+
+
+@include mq($from: desktopXXLarge) {
+
+}
