@@ -191,10 +191,10 @@ if ($post_thumbnail_id) {
                                 <?php echo $norway['third_button_description'];?>
                                 " value="<?php echo $norway['third_button_value'];?>" class="giving-widget__option"><?php echo $norway['third_button_amount'];?></div>
                             </div> 
-                            <div class="giving-widget__custom-amount christmas__amount giving-widget__custom-amount--pre-kr">
+                            <div class="giving-widget__custom-amount christmas__amount--norge christmas__amount giving-widget__custom-amount--pre-kr">
                                 <input type="text" name="Amount" class="required numberOnly form-control donate-uk__amount" id="Amount" maxlength="10" value="<?php echo $norway['first_button_value'];?>">
                             </div>
-                            <a id="unlock-freedom" data-toggle="modal" data-target="#payment-modal" class="button button--solid button--black donate-uk__modal-trig" href=""><?php echo $uk['donate_button_text'];?></a>
+                            <a id="unlock-freedom" data-toggle="modal" data-target="#payment-modal" class="button button--solid button--black donate-uk__modal-trig" href=""><?php echo $norway['donate_button_text'];?></a>
                         </div>
                     </div>
                     <div class="christmas-widget__footer">
@@ -238,6 +238,12 @@ if ($post_thumbnail_id) {
 <?php endwhile; // end of the loop. ?>
   
 <?php } else { ?>
+
+
+<?php wp_redirect('https://donate.thebiggive.org.uk/campaign/a056900001wWzCuAAK'); ?>
+
+
+
 <!-- rest of the world / uk -->
 
 <?php while ( have_posts() ) : the_post(); ?>       
