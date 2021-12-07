@@ -240,10 +240,6 @@ if ($post_thumbnail_id) {
 <?php } else { ?>
 
 
-<?php wp_redirect('https://donate.thebiggive.org.uk/campaign/a056900001wWzCuAAK'); ?>
-
-
-
 <!-- rest of the world / uk -->
 
 <?php while ( have_posts() ) : the_post(); ?>       

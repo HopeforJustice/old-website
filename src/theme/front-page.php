@@ -222,23 +222,18 @@ get_header(); ?>
 
 		<!--/. lock footer-->
 
-		<!-- modal
-	     <div class="modal fade letter-modal" id="letter-modal" tabindex="-1" role="dialog" aria-hidden="false">
-	      <div class="letter-modal__dialog">
-	        <div class="letter-modal__content">
-		          	<h2>Write a letter to a child who is now free from trafficking</h2>
-		          	<div class="letter-modal__body">
-		          	<p>
-		          	Millions of children are trafficked every year. We are working across the globe to set them free and to restore their dreams. To mark World Day Against Trafficking in Persons, we would love you to join with us in bringing life, hope and joy to the children in our care by writing a letter to a survivor we support.
-		          	</p>
-		          	<div class="letter-modal__footer"style="display:flex;"><a class="button button--solid button--blue button--large" href="/letter-to-survivor?Source=Popup">Find out more</a></div>
-		         </div>
-
+		<!-- modal campaign -->
+	  	<div class="modal modal-campaign fade" id="campaign-modal" tabindex="-1" role="dialog" aria-hidden="false">
+	      <div class="modal__dialog">
+	        <div class="modal__content">
+	        	<a href="#" data-dismiss="parfait-modal" class="gi-close modal__close"><span class="accessibility">Close</span></a>
+	        	<h2>The Gift of Hope</h2>
+				<p class="modal__text">Gifts to Hope for Justice via this link will be <b>DOUBLED</b> for a limited time thanks to our generous match-funders. You can give a victim of human trafficking the incredible gift of hope.</p>
+				<a class="button button--red button--solid button--large" href="/thegiftofhope">Donate</a>
 	        </div>
-	        <a href="#" data-dismiss="modal" class="gi-close letter-modal__close"><span class="accessibility">Close</span></a>
-	      </div>
-
-	    </div>-->
+	        
+	     </div>
+	    </div>
 
 
 		<?php endif; ?>
@@ -256,6 +251,7 @@ get_header(); ?>
 		        </div>
 		        
 		     </div>
+		    </div>
 
 
 		<?php } ?>
@@ -273,6 +269,7 @@ get_header(); ?>
 		        </div>
 		        
 		     </div>
+		 	</div>
 
 
 		<?php } ?>

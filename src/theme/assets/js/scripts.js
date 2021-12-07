@@ -158,6 +158,12 @@ jQuery(document).ready(function($) {
     //if retrak modal exists show it
     $('#retrak-modal').modal('show');
 
+    var cookie = Cookies.get('thegiftofhope');
+    
+    if (cookie !== 'visited') {
+        Cookies.set('thegiftofhope', 'visited', { expires: 30 });
+        $('#campaign-modal').modal('show');
+    }
     //if retrak donate modal exists show it
     $('#retrak-modal-donate').modal('show');
 

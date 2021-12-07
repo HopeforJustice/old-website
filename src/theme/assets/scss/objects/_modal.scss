@@ -7,22 +7,19 @@
 	padding:20px;
 	.modal__dialog {
 		margin:auto;
-		overflow: hidden;
-		display: flex;  
-		flex-direction: column;
-		justify-content: center;
-		align-items:center;
-		overflow-y: auto;
-		min-height: calc(100vh - 100px);
+		overflow: hidden; 
+		margin: 0 auto;
+		margin-top: 20vh;
+		max-width: 500px;
+		//min-height: calc(100vh - 100px);
 		}
 	.modal__content {
 		padding:35px;
 		padding-top:40px;
 		background-color:#f2f2f2;
 		border-radius: 5px;
-		position:relative;
+		position: relative;
 		width:100%;
-		max-width: 500px;
 	}
 }
 
@@ -44,6 +41,44 @@
     }
 }
 
+.modal-campaign {
+	h2 {
+		font-family: 'canela-medium';
+		font-size: 28px;
+		color: $hfj-red;
+		font-weight: normal;
+	}
+	.modal__content {
+		border-radius:20px;
+		text-align: center;
+	}
+	.modal__text {
+		margin-bottom: 20px;
+		color: #092938;
+	}
+}
+
+@include mq($from: tablet) {
+
+.modal-campaign {
+	h2 {
+		font-size: 48px;
+		margin-bottom: 21px;
+	}
+	.modal__dialog{
+		max-width: 531px;
+	}
+	.modal__content {
+		padding:52px;
+	}
+	.modal__text {
+		font-size: 18px;
+		margin-bottom: 40px;
+	}
+}
+
+
+}
 
 
 @include mq($from: desktop) {

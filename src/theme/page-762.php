@@ -107,6 +107,19 @@ get_header();?>
  </div>
 </div>
 
+<!-- modal campaign -->
+<div class="modal modal-campaign fade" id="campaign-modal" tabindex="-1" role="dialog" aria-hidden="false">
+  <div class="modal__dialog">
+    <div class="modal__content">
+        <a href="#" data-dismiss="parfait-modal" class="gi-close modal__close"><span class="accessibility">Close</span></a>
+        <h2>The Gift of Hope</h2>
+        <p class="modal__text">Gifts to Hope for Justice via this link will be <b>DOUBLED</b> for a limited time thanks to our generous match-funders. You can give a victim of human trafficking the incredible gift of hope.</p>
+        <a class="button button--red button--solid button--large" href="/thegiftofhope">Donate</a>
+    </div>
+    
+ </div>
+</div>
+
 <?php endwhile; // end of the loop. ?>
 
     
