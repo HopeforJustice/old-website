@@ -12,7 +12,7 @@ get_header();
 <main id="main" class="site-main rag" role="main">
 
 <div style="background-image: url('<?php the_field('background'); ?>');" class="rag-hero">
-    <a href="/"><img class="rag-hero__logo" src="https://hopeforjustice.org/wp-content/uploads/2021/10/logo-white-new.svg"></a>
+    <a href="/"><img class="rag-hero__logo" src="https://archive.hopeforjustice.org/wp-content/uploads/2021/10/logo-white-new.svg"></a>
 </div>
 
 

@@ -38,9 +38,9 @@
 		}
 	} elseif ($userInfo && in_array($userInfo, $no_donate)) {
 		if ($campaign === null) {
-			$url .= '/norway-donate-once/';
+			$url .= '/thegiftofhope/';
 		} else {
-			$url .= '/norway-donate-once/' . '?Campaign=' . $campaign . '&Channel=' . $channel;
+			$url .= '/thegiftofhope/' . '?Campaign=' . $campaign . '&Channel=' . $channel;
 		}
 	} else {
 		if ($campaign === null) {
